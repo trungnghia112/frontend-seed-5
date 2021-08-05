@@ -1,0 +1,45 @@
+//<nav class="cl-effect-1">
+//  <a href="#">Wafture</a>
+//  <a href="#">Sumptuous</a>
+//  <a href="#">Scintilla</a>
+//  <a href="#">Propinquity</a>
+//  <a href="#">Harbinger</a>
+//</nav>
+
+[class^="cl-effect-"],
+[class*=" cl-effect-"] {
+  a {
+    position: relative;
+    //display: inline-block;
+    //margin: 15px 25px;
+    //outline: none;
+    //text-decoration: none;
+    //text-transform: uppercase;
+    //letter-spacing: 1px;
+    //font-weight: 400;
+    //text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    //font-size: 1.35em;
+  }
+}
+
+@import "effect-1";
+@import "effect-2";
+@import "effect-3";
+@import "effect-4";
+@import "effect-5";
+@import "effect-6";
+@import "effect-7";
+@import "effect-8";
+@import "effect-9";
+@import "effect-10";
+@import "effect-11";
+@import "effect-12";
+@import "effect-13";
+@import "effect-14";
+@import "effect-15";
+@import "effect-16";
+@import "effect-17";
+@import "effect-18";
+@import "effect-19";
+@import "effect-20";
+@import "effect-21";

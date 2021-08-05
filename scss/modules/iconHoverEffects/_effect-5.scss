@@ -1,0 +1,92 @@
+/* Effect 5 */
+@mixin hi-icon-effect-5($color,$background) {
+  .hi-icon {
+    box-shadow: 0 0 0 2px rgba($background, 1);
+    overflow: hidden;
+    @include transition(background 0.3s, color 0.3s, box-shadow 0.3s);
+
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      background: rgba($background, 1);
+      color: $color;
+      box-shadow: 0 0 0 4px rgba($background, 0.3);
+    }
+  }
+}
+
+.hi-icon-effect-5 {
+  @include hi-icon-effect-5(#702fa8, #ffffff);
+}
+
+/* Effect 5a */
+.hi-icon-effect-5a .hi-icon:hover:before {
+  @include animation(hi-toRightFromLeft 0.3s forwards);
+}
+
+.hi-icon-effect-5b .hi-icon:hover:before {
+  @include animation(hi-toLeftFromRight 0.3s forwards);
+}
+
+.hi-icon-effect-5c .hi-icon:hover:before {
+  @include animation(hi-toTopFromBottom 0.3s forwards);
+}
+
+.hi-icon-effect-5d .hi-icon:hover:before {
+  @include animation(hi-toBottomFromTop 0.3s forwards)
+}
+
+
+@include keyframes(hi-toRightFromLeft) {
+  49% {
+    @include transform(translate(100%));
+  }
+  50% {
+    opacity: 0;
+    @include transform(translate(-100%));
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(hi-toLeftFromRight) {
+  49% {
+    @include transform(translate(-100%));
+  }
+  50% {
+    opacity: 0;
+    @include transform(translate(100%));
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(hi-toTopFromBottom) {
+  49% {
+    @include transform(translateY(-100%));
+  }
+  50% {
+    opacity: 0;
+    @include transform(translateY(100%));
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(hi-toBottomFromTop) {
+  49% {
+    @include transform(translateY(100%))
+  }
+  50% {
+    opacity: 0;
+    @include transform(translateY(-100%));
+  }
+  51% {
+    opacity: 1;
+  }
+}

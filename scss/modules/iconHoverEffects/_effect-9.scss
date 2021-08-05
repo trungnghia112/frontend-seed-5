@@ -1,0 +1,57 @@
+/* Effect 9 */
+@mixin hi-icon-effect-9($background) {
+  .hi-icon {
+    @include transition(box-shadow 0.2s);
+
+    &:after {
+      top: 0;
+      left: 0;
+      padding: 0;
+      box-shadow: 0 0 0 2px $background;
+      @include transition(transform 0.2s, opacity 0.2s);
+    }
+  }
+}
+
+.hi-icon-effect-9 {
+  @include hi-icon-effect-9(#ffffff);
+}
+
+/* Effect 9a */
+/* Effect 1b */
+@mixin hi-icon-effect-9a($color, $background) {
+  .hi-icon {
+    &:hover {
+      box-shadow: 0 0 0 5px rgba($background, 1);
+      color: $color;
+
+      &:after {
+        opacity: 0.5;
+        @include transform(scale(0.85));
+      }
+    }
+  }
+}
+
+.hi-icon-effect-9a {
+  @include hi-icon-effect-9a(#ffffff, #ffffff);
+}
+
+
+/* Effect 9b */
+@mixin hi-icon-effect-9b($color, $background) {
+  .hi-icon {
+    &:hover {
+      box-shadow: 0 0 0 5px rgba($background, 0.4);
+      color: $color;
+
+      &:after {
+        @include transform(scale(0.85));
+      }
+    }
+  }
+}
+
+.hi-icon-effect-9b {
+  @include hi-icon-effect-9b(#ffffff, #ffffff);
+}

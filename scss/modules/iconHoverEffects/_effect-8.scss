@@ -1,0 +1,47 @@
+/* Effect 8 */
+@mixin hi-icon-effect-8($color, $background-color, $color-hover) {
+  .hi-icon {
+    background: rgba($background-color, 0.1);
+    @include transition(transform ease-out 0.1s, background 0.2s);
+
+    &:after {
+      top: 0;
+      left: 0;
+      padding: 0;
+      z-index: -1;
+      box-shadow: 0 0 0 2px rgba($background-color, 0.1);
+      opacity: 0;
+      @include transform(scale(0.9));
+    }
+
+    &:hover {
+      background: rgba($background-color, 0.05);
+      @include transform(scale(0.93));
+      color: $color;
+
+      &:after {
+        @include animation(hi-sonarEffect 1.3s ease-out 75ms)
+      }
+    }
+  }
+  @include keyframes(hi-sonarEffect) {
+    0% {
+      opacity: 0.3;
+    }
+    40% {
+      opacity: 0.5;
+      box-shadow: 0 0 0 2px rgba($background-color, 0.1), 0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 2px rgba($background-color, 0.1), 0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
+      opacity: 0;
+      @include transform(scale(1.5));
+    }
+  }
+}
+
+.hi-icon-effect-8 {
+  @include hi-icon-effect-8(#ffffff, #ffffff, #3851bc);
+}
+
+

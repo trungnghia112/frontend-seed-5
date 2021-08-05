@@ -1,0 +1,60 @@
+/* Effect 4 */
+@mixin hi-icon-effect-4($border-color) {
+  .hi-icon {
+    box-shadow: 0 0 0 2px rgba($border-color, 1);
+
+    &:after {
+      top: -2px;
+      left: -2px;
+      padding: 0;
+      z-index: 10;
+      border: 2px dashed $border-color;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 0 rgba($border-color, 0);
+      color: $border-color;
+    }
+  }
+}
+
+.hi-icon-effect-4 {
+  @include hi-icon-effect-4(#fff);
+}
+
+/* Effect 4a */
+@mixin hi-icon-effect-4a() {
+  .hi-icon {
+    @include transition(box-shadow 0.2s);
+  }
+}
+
+.hi-icon-effect-4a {
+  @include hi-icon-effect-4a();
+}
+
+/* Effect 4b */
+@mixin hi-icon-effect-4b() {
+  .hi-icon {
+    &:hover {
+      @include transition(box-shadow 0.2s);
+
+      &:after {
+        @include animation(hi-spinAround 9s linear infinite)
+      }
+    }
+  }
+}
+
+.hi-icon-effect-4b {
+  @include hi-icon-effect-4b();
+}
+
+@include keyframes(hi-spinAround) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(360deg));
+  }
+}

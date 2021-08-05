@@ -1,0 +1,20 @@
+/* Effect 6 */
+@mixin hi-icon-effect-6($color, $background-color) {
+  .hi-icon {
+    box-shadow: 0 0 0 2px rgba($background-color, 1);
+    @include transition(background 0.2s, color 0.2s);
+
+    &:hover {
+      background: rgba($background-color, 1);
+      color: $color;
+
+      &:before {
+        @include animation(hi-spinAround 2s linear infinite);
+      }
+    }
+  }
+}
+
+.hi-icon-effect-6 {
+  @include hi-icon-effect-6(#64bb5d, #ffffff);
+}

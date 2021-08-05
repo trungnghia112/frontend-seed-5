@@ -1,0 +1,69 @@
+/* Effect 3 */
+@mixin hi-icon-effect-3($border, $border-color) {
+  & .hi-icon {
+    box-shadow: 0 0 0 $border $border-color;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+
+    &:after {
+      top: -($border/2);
+      left: -($border/2);
+      padding: ($border/2);
+      z-index: -1;
+      background: $border-color;
+      -webkit-transition: -webkit-transform 0.2s, opacity 0.3s;
+      -moz-transition: -moz-transform 0.2s, opacity 0.3s;
+      transition: transform 0.2s, opacity 0.3s;
+    }
+  }
+}
+
+.hi-icon-effect-3 {
+  @include hi-icon-effect-3(2px, #fff);
+}
+
+/* Effect 3a */
+@mixin hi-icon-effect-3a($color, $color-hover) {
+  & .hi-icon {
+    color: $color;
+
+    &:hover {
+      color: $color-hover;
+
+      &:after {
+        @include opacity(0);
+        @include transform(scale(1.3));
+      }
+    }
+  }
+}
+
+.hi-icon-effect-3a {
+  @include hi-icon-effect-3a(#f06060, #FFF);
+}
+
+/* Effect 3b */
+@mixin hi-icon-effect-3b($color, $color-hover) {
+  & .hi-icon {
+    color: $color;
+
+    &:after {
+      @include opacity(0);
+      @include transform(scale(1.3));
+    }
+
+    &:hover {
+      color: $color-hover;
+
+      &:after {
+        @include opacity(1);
+        @include transform(scale(1));
+      }
+    }
+  }
+}
+
+.hi-icon-effect-3b {
+  @include hi-icon-effect-3b(#FFF, #f06060);
+}

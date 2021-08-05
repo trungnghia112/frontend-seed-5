@@ -1,0 +1,80 @@
+{
+  "name": "frontend-seed-5",
+  "version": "1.0.0",
+  "description": "A basic HTML starter template for Bootstrap 5",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://github.com/trungnghia112/frontend-seed-5",
+  "author": "trungnghia112 <trungnghia112@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/trungnghia112/frontend-seed-5/issues",
+    "email": "trungnghia112@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trungnghia112/frontend-seed-5"
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "prettier": "prettier ./**/*.{json,md,scss} --write",
+    "clean": "gulp clean",
+    "build": "npm run clean && npm run prettier && gulp build",
+    "release": "standard-version -a",
+    "release-as": "standard-version --release-as",
+    "release-minor": "standard-version minor -a",
+    "publish": "git push --follow-tags origin master && npm publish"
+  },
+  "engines": {
+    "node": ">=6.9.0",
+    "npm": ">=3.10.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.14.5",
+    "browser-sync": "^2.27.5",
+    "eslint": "^7.32.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-purgecss": "^4.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0",
+    "standard-version": "^9.3.1"
+  }
+}

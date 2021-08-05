@@ -1,0 +1,49 @@
+/*!--------------------------------------------------------------------------------
+
+    Theme Name: Frontend Seed 4
+    Author:     trungnghia112 <trungnghia112@gmail.com>
+
+-----------------------------------------------------------------------------------*/
+//  Core
+//  Bootstrap
+//  Third parties
+//  Partials
+//  Modules
+//  Layout
+//  Pages
+//---------------------------------------------------------------------------------*/
+//
+// =Core
+// --------------------------------------------------
+@import 'core';
+//
+// =Bootstrap
+// --------------------------------------------------
+@import 'custom-bootstrap';
+@import 'bootstrap/bootstrap';
+//
+// =Third parties
+// --------------------------------------------------
+//
+// =Partials
+// --------------------------------------------------
+@import 'partials/fonts';
+@import 'partials/icons';
+@import 'partials/scrollbar-measure';
+//
+// =Modules
+// --------------------------------------------------
+//@import "modules/facebook-responsive";
+//@import 'modules/iconHoverEffects/iconHoverEffects';
+//@import 'modules/creativeLinkEffects/creativeLinkEffects';
+@import 'modules/list';
+//
+// =Layout
+// --------------------------------------------------
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
+//
+// =Pages
+// --------------------------------------------------
+@import 'pages/home';

@@ -1,0 +1,23 @@
+/* Effect 15: scale down, reveal */
+.cl-effect-15 a {
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-shadow: none;
+}
+
+.cl-effect-15 a::before {
+  color: #fff;
+  content: attr(data-hover);
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.cl-effect-15 a:hover::before,
+.cl-effect-15 a:focus::before {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}
