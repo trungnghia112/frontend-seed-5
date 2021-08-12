@@ -10,9 +10,11 @@ const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const gulpClean = require('gulp-clean')
 const plumber = require('gulp-plumber')
-const browserSync = require('browser-sync').create()
 const size = require('gulp-size')
 const purgecss = require('gulp-purgecss')
+
+const browserSync = require('browser-sync');
+const server = browserSync.create()
 
 const paths = {
   html: {
@@ -64,7 +66,7 @@ function styles() {
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.reload({stream: true}))
 }
 
 /*
@@ -83,7 +85,7 @@ function stylesMin() {
     )
     .pipe(size())
     .pipe(gulp.dest(paths.stylesMin.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.reload({stream: true}))
 }
 
 function unusedCSS() {
@@ -107,7 +109,7 @@ function scripts() {
     .pipe(concat('app.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.reload({stream: true}))
 }
 
 function scriptsCore() {
@@ -119,7 +121,7 @@ function scriptsCore() {
     .pipe(concat('core.min.js'))
     .pipe(size())
     .pipe(gulp.dest(paths.scriptsCore.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.reload({stream: true}))
 }
 
 function images() {
@@ -130,21 +132,26 @@ function images() {
     .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(size())
     .pipe(gulp.dest(paths.images.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.reload({stream: true}))
 }
 
 function serve() {
-  browserSync.init({
-    notify: true,
+  server.init({
+    notify: false,
     port: 9000,
-    server: '.'
+    server: {
+      baseDir: ['.'],
+      routes: {
+        '/node_modules': 'node_modules'
+      }
+    }
   })
   gulp.watch(paths.scripts.src, scripts)
   gulp.watch(paths.scriptsCore.src, scriptsCore)
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.stylesMin.src, stylesMin)
   gulp.watch(paths.images.src, images)
-  gulp.watch(paths.html.src).on('change', browserSync.reload)
+  gulp.watch(paths.html.src).on('change', server.reload)
 }
 
 function watch() {
