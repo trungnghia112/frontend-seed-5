@@ -24,6 +24,11 @@
 //
 // =Third parties
 // --------------------------------------------------
+@import '../third_party/spine-player/spine-player.css';
+@import '../third_party/animate.css/animate.min.css';
+@import '../third_party/fullpage.js/dist/fullpage.min.css';
+@import '../third_party/slick-carousel/slick/slick.css';
+@import '../third_party/slick-carousel/slick/slick-theme.css';
 //
 // =Partials
 // --------------------------------------------------
@@ -46,4 +51,15 @@
 //
 // =Pages
 // --------------------------------------------------
+@import 'sections/section-hero';
+@import 'sections/section-video-trailer';
+@import 'sections/section-about';
+@import 'sections/section-gamesystem';
+@import 'sections/section-playtotrade';
+@import 'sections/section-tokenomics';
+@import 'sections/section-roadmap';
+@import 'sections/section-roadmap-update';
+@import 'sections/section-team';
+@import 'sections/section-investor';
+@import 'sections/section-partner';
 @import 'pages/home';

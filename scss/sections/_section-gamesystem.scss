@@ -1,0 +1,103 @@
+.gamesystem-content-box {
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border-top: 5px solid #afc1ec;
+  font-size: 13px;
+
+  .gamesystem-content-header {
+    background-color: rgba(#677189, 0.5);
+    text-align: center;
+    padding: 5px;
+
+    .h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .gamesystem-content-body {
+    border: 2px solid rgba(#677189, 0.5);
+    background-color: rgba(#1f1b32, 0.5);
+    @include border-bottom-radius(10px);
+    padding: 10px;
+
+    .h4 {
+      font-size: 18px;
+      text-align: center;
+      background-image: url('../images/bg/gamesystem-el-title.png');
+      background-size: cover;
+      background-position: center center;
+      padding: 15px 0;
+    }
+  }
+
+  .gamesystem-elements-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    @include flexbox;
+    @include justify-content(center);
+    max-width: 300px;
+
+    > li {
+      display: inline-block;
+      flex: 0 0 auto;
+      margin: 0 3%;
+      text-align: center;
+
+      div {
+        margin-bottom: 5px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 50px;
+      }
+    }
+  }
+}
+
+.gamesystem-slider {
+  max-width: 600px;
+
+  .gamesystem-slide-item {
+    color: #ffffff;
+    text-align: center;
+    margin-left: -15%;
+    margin-right: -15%;
+    div {
+      width: 100%;
+    }
+    p {
+      margin-top: 15px;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }
+  .gamesystem-slide-item-footage {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: -12%;
+  }
+  .gamesystem-slide-item-img {
+    position: relative;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+    > div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+}

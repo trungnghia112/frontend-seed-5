@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html dir='ltr' lang='en'>
+
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-  <title>Frontend Seed 5</title>
+  <title>ETERMON - Play to earn (NFTs) Game</title>
   
-  <link rel='apple-touch-icon' sizes='180x180' href='/images/favicons/apple-touch-icon.png'>
-  <link rel='icon' type='image/png' sizes='32x32' href='/images/favicons/favicon-32x32.png'>
-  <link rel='icon' type='image/png' sizes='16x16' href='/images/favicons/favicon-16x16.png'>
-  <link rel='manifest' href='/images/favicons/site.webmanifest'>
-  <link rel='mask-icon' href='/images/favicons/safari-pinned-tab.svg' color='#5bbad5'>
-  <link rel='shortcut icon' href='/images/favicons/favicon.ico'>
-  <meta name='msapplication-TileColor' content='#da532c'>
-  <meta name='msapplication-config' content='/images/favicons/browserconfig.xml'>
+  <link rel='apple-touch-icon' sizes='180x180' href='images/favicons/apple-touch-icon.png?v=3.2'>
+  <link rel='icon' type='image/png' sizes='32x32' href='images/favicons/favicon-32x32.png?v=3.2'>
+  <link rel='icon' type='image/png' sizes='16x16' href='images/favicons/favicon-16x16.png?v=3.2'>
+  <link rel='manifest' href='images/favicons/site.webmanifest?v=3.2'>
+  <link rel='mask-icon' href='images/favicons/safari-pinned-tab.svg?v=3.2' color='#5bbad5'>
+  <link rel='shortcut icon' href='images/favicons/favicon.ico?v=3.2'>
+  <meta name='msapplication-TileColor' content='#ffffff'>
+  <meta name='msapplication-config' content='images/favicons/browserconfig.xml?v=3.2'>
   <meta name='theme-color' content='#ffffff'>
   
-  <link rel='canonical' href='http://'>
-  <meta name='title' content='Frontend Seed 5 - Title'>
+  <link rel='canonical' href='https://etermon.io'>
+  <meta name='title' content='ETERMON - Play to earn (NFTs) Game'>
   <meta name='referrer' content='unsafe-url'>
-  <meta name='description' content='Frontend Seed 5 - Description'>
+  <meta name='description'
+        content='ETERMON is a game based on blockchain technology. You can gather your friends, form a team, battle with others and earn money with just your skills. Play to Earn, now!'>
+  <meta name='keywords'
+        content='etermon, etermon coin, etermon hướng dẫn, etermon là gì, etermon coinmarketcap, etermon marks, kingetermon, etermon game, etermon clain coin, etermon apk, etermon android, etermon whitepageper'>
   
-  <meta property='fb:app_id' content='your_app_id'>
   <meta property='og:locale' content='en_US' />
   <meta property='og:type' content='article' />
-  <meta property='og:title' content=''>
-  <meta property='og:description' content=''>
-  <meta property='og:url' content=''>
-  <meta property='og:site_name' content=''>
-  <meta property='article:publisher' content=''>
+  <meta property='og:title' content='ETERMON - Play to earn (NFTs) Game'>
+  <meta property='og:description'
+        content='ETERMON is a game based on blockchain technology. You can gather your friends, form a team, battle with others and earn money with just your skills. Play to Earn, now!'>
+  <meta property='og:url' content='https://etermon.io'>
+  <meta property='og:site_name' content='etermon'>
+  <meta property='article:publisher' content='etermon'>
   <meta property='article:section' content='Article'>
   <meta property='article:published_time' content=''>
   <meta property='article:modified_time' content=''>
@@ -36,9 +40,10 @@
   <meta property='og:image' content=''>
   
   <meta name='twitter:card' content='summary'>
-  <meta name='twitter:description' content=''>
-  <meta name='twitter:title' content=''>
-  <meta name='twitter:site' content=''>
+  <meta name='twitter:description'
+        content='ETERMON is a game based on blockchain technology. You can gather your friends, form a team, battle with others and earn money with just your skills. Play to Earn, now!'>
+  <meta name='twitter:title' content='ETERMON - Play to earn (NFTs) Game'>
+  <meta name='twitter:site' content='etermon'>
   <meta name='twitter:image' content=''>
   <meta name='twitter:creator' content=''>
   <!-- App CSS -->
@@ -59,86 +64,199 @@
       }
 
       .app-loading {
-          background: var(--bg-color);
+          background: rgb(63, 94, 251);
+          background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           z-index: 9999;
-          height: 100vh;
+          min-height: 100vh;
+          max-height: 100vh;
           display: flex;
           justify-content: center;
           align-items: center;
       }
 
-      @keyframes bouncing-loader {
-          to {
-              opacity: 0.1;
-              transform: translate3d(0, -1rem, 0);
+      .lds-roller {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 80px;
+      }
+
+      .lds-roller img {
+          z-index: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+      .lds-roller div {
+          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          transform-origin: 40px 40px;
+      }
+
+      .lds-roller div:after {
+          content: " ";
+          display: block;
+          position: absolute;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: #fff;
+          margin: -4px 0 0 -4px;
+      }
+
+      .lds-roller div:nth-child(1) {
+          animation-delay: -0.036s;
+      }
+
+      .lds-roller div:nth-child(1):after {
+          top: 63px;
+          left: 63px;
+      }
+
+      .lds-roller div:nth-child(2) {
+          animation-delay: -0.072s;
+      }
+
+      .lds-roller div:nth-child(2):after {
+          top: 68px;
+          left: 56px;
+      }
+
+      .lds-roller div:nth-child(3) {
+          animation-delay: -0.108s;
+      }
+
+      .lds-roller div:nth-child(3):after {
+          top: 71px;
+          left: 48px;
+      }
+
+      .lds-roller div:nth-child(4) {
+          animation-delay: -0.144s;
+      }
+
+      .lds-roller div:nth-child(4):after {
+          top: 72px;
+          left: 40px;
+      }
+
+      .lds-roller div:nth-child(5) {
+          animation-delay: -0.18s;
+      }
+
+      .lds-roller div:nth-child(5):after {
+          top: 71px;
+          left: 32px;
+      }
+
+      .lds-roller div:nth-child(6) {
+          animation-delay: -0.216s;
+      }
+
+      .lds-roller div:nth-child(6):after {
+          top: 68px;
+          left: 24px;
+      }
+
+      .lds-roller div:nth-child(7) {
+          animation-delay: -0.252s;
+      }
+
+      .lds-roller div:nth-child(7):after {
+          top: 63px;
+          left: 17px;
+      }
+
+      .lds-roller div:nth-child(8) {
+          animation-delay: -0.288s;
+      }
+
+      .lds-roller div:nth-child(8):after {
+          top: 56px;
+          left: 12px;
+      }
+
+      @keyframes lds-roller {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
           }
       }
-
-      .app-loading .bouncing-loader {
-          display: flex;
-          justify-content: center;
-      }
-
-      .app-loading .bouncing-loader > div {
-          width: 1rem;
-          height: 1rem;
-          margin: 3rem 0.2rem;
-          background: var(--theme-color);
-          border-radius: 50%;
-          animation: bouncing-loader 0.6s infinite alternate;
-      }
-
-      .app-loading .bouncing-loader > div:nth-child(2) {
-          animation-delay: 0.2s;
-      }
-
-      .app-loading .bouncing-loader > div:nth-child(3) {
-          animation-delay: 0.4s;
-      }
   </style>
-  <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+  
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'"
+        href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap'>
   <noscript>
-    <link rel="stylesheet" href="dist/app.min.css">
-  </noscript>-->
+    <link href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap' rel='stylesheet'>
+  </noscript>
   <link rel='stylesheet' href='css/style.css'>
   <link rel='stylesheet' href='customs/style.css'>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src='https://www.googletagmanager.com/gtag/js?id=UA-159081823-22'></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+
+    gtag('js', new Date())
+
+    gtag('config', 'UA-159081823-22')
+  </script>
 </head>
 
 <body>
-<div class='app-loading'>
-  <div class='bouncing-loader'>
+<div id='loading-wrapper' class='app-loading'>
+  <div class='lds-roller '>
     <div></div>
     <div></div>
     <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <img src='images/logo_loading.png' alt='' class='loading-logo'>
   </div>
 </div>
-<div class='wrapper' id='site_wrapper'>
-  <header class='header' id='header'>
-  </header>
-  <main class='main' id='main'>
-    <h1>Hello world!</h1>
-  </main>
-  <footer class='footer' id='footer'>
-  </footer>
-</div>
-
+ss
 <!-- Optional JavaScript -->
-<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js'
-        integrity='sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj'
-        crossorigin='anonymous'></script>
 <!-- Core JavaScript -->
 <!--<script src="dist/core.min.js"></script>-->
+<script src='third_party/jquery.min.js'></script>
+<script src='third_party/bootstrap.bundle.min.js'></script>
 <script src='third_party/modernizr.min.js'></script>
+<!--<script src='third_party/spine-player/spine-player.js'></script>-->
+<!--<script src='third_party/fullpage.js/dist/fullpage.js'></script>-->
+<!--<script src='third_party/fullpage.js/dist/fullpage.extensions.min.js'></script>-->
+<!--<script src='third_party/slick-carousel/slick/slick.min.js'></script>-->
 <!-- End Core JavaScript -->
 
 <!-- JavaScript -->
 <!--<script src="dist/app.min.js"></script>-->
 <script src='js/common.js'></script>
 <script src='customs/script.js'></script>
+
+<script>
+  setTimeout(function() {
+    $('#loading-wrapper').fadeOut('fast')
+    $('.hero-content-cooperate').addClass('animate__animated animate__tada animate__repeat-2')
+    $('.button-col-android').addClass('animate__animated animate__backInLeft animate__delay-2s')
+    $('.button-col-ios').addClass('animate__animated animate__backInUp animate__delay-2s')
+    $('.button-col-web').addClass('animate__animated animate__backInRight animate__delay-2s')
+  }, 3000)
+</script>
 <!-- End JavaScript -->
 </body>
 </html>

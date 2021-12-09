@@ -1,0 +1,118 @@
+.section-roadmap {
+  .section-roadmap-content {
+    position: relative;
+
+    .section-roadmap-img {
+      mix-blend-mode: screen;
+      width: 100%;
+    }
+  }
+
+  .section-roadmap-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include media-breakpoint-up(lg) {
+      > li {
+        @include center();
+        width: 150px;
+        text-align: center;
+        color: #ffffff;
+        @include flexbox;
+        @include flex-direction(column);
+        font-size: 13px;
+        opacity: 0;
+
+        p, h3 {
+          margin: 0;
+        }
+
+        h3 {
+          @include flexbox;
+          @include flex-direction(column);
+
+          &:after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
+            background-image: url('../images/roadmap-dot.png');
+            background-size: cover;
+          }
+        }
+
+        &:nth-child(odd) {
+          .h3 {
+            @include order(2);
+
+            &:after {
+              @include order(-1);
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          @include transition(all 0.2s ease);
+        }
+
+        &:nth-child(2) {
+          @include transition(all 0.3s ease);
+        }
+
+        &:nth-child(3) {
+          @include transition(all 0.4s ease);
+        }
+
+        &:nth-child(4) {
+          @include transition(all 0.5s ease);
+        }
+
+        &:nth-child(5) {
+          @include transition(all 0.6s ease);
+        }
+
+        &:nth-child(6) {
+          @include transition(all 0.7s ease);
+        }
+      }
+    }
+  }
+
+  &.fp-completely .section-roadmap-list {
+    > li {
+      opacity: 1;
+
+      &:nth-child(1) {
+        margin-left: -40%;
+        margin-top: 7.5%;
+      }
+
+      &:nth-child(2) {
+        margin-left: -24%;
+        margin-top: 3.5%;
+      }
+
+      &:nth-child(3) {
+        margin-left: -9%;
+        margin-top: 2%;
+      }
+
+      &:nth-child(4) {
+        margin-left: 4%;
+        margin-top: -6%;
+      }
+
+      &:nth-child(5) {
+        margin-left: 19%;
+        margin-top: -1.5%;
+      }
+
+      &:nth-child(6) {
+        margin-left: 34%;
+        margin-top: 0.5%;
+      }
+    }
+  }
+}

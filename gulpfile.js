@@ -6,19 +6,19 @@ const sass = require('gulp-sass')(require('sass'))
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 // const cleanCSS = require('gulp-clean-css')
-const imagemin = require('gulp-imagemin')
+// const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const gulpClean = require('gulp-clean')
 const plumber = require('gulp-plumber')
 const size = require('gulp-size')
 const purgecss = require('gulp-purgecss')
 
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync')
 const server = browserSync.create()
 
 const paths = {
   html: {
-    src: './**/*.html',
+    src: './index.html',
     dest: '.'
   },
   styles: {
@@ -66,7 +66,7 @@ function styles() {
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(server.reload({stream: true}))
+    .pipe(server.reload({ stream: true }))
 }
 
 /*
@@ -85,7 +85,7 @@ function stylesMin() {
     )
     .pipe(size())
     .pipe(gulp.dest(paths.stylesMin.dest))
-    .pipe(server.reload({stream: true}))
+    .pipe(server.reload({ stream: true }))
 }
 
 function unusedCSS() {
@@ -109,7 +109,7 @@ function scripts() {
     .pipe(concat('app.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(server.reload({stream: true}))
+    .pipe(server.reload({ stream: true }))
 }
 
 function scriptsCore() {
@@ -121,10 +121,10 @@ function scriptsCore() {
     .pipe(concat('core.min.js'))
     .pipe(size())
     .pipe(gulp.dest(paths.scriptsCore.dest))
-    .pipe(server.reload({stream: true}))
+    .pipe(server.reload({ stream: true }))
 }
 
-function images() {
+/*function images() {
   return gulp
     .src(paths.images.src)
     .pipe(plumber())
@@ -133,7 +133,7 @@ function images() {
     .pipe(size())
     .pipe(gulp.dest(paths.images.dest))
     .pipe(server.reload({stream: true}))
-}
+}*/
 
 function serve() {
   server.init({
@@ -146,11 +146,11 @@ function serve() {
       }
     }
   })
-  gulp.watch(paths.scripts.src, scripts)
-  gulp.watch(paths.scriptsCore.src, scriptsCore)
-  gulp.watch(paths.styles.src, styles)
-  gulp.watch(paths.stylesMin.src, stylesMin)
-  gulp.watch(paths.images.src, images)
+  // gulp.watch(paths.scripts.src, scripts)
+  // gulp.watch(paths.scriptsCore.src, scriptsCore)
+  // gulp.watch(paths.styles.src, styles)
+  // gulp.watch(paths.stylesMin.src, stylesMin)
+  // gulp.watch(paths.images.src, images)
   gulp.watch(paths.html.src).on('change', server.reload)
 }
 
@@ -159,7 +159,7 @@ function watch() {
   gulp.watch(paths.scriptsCore.src, scriptsCore)
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.stylesMin.src, stylesMin)
-  gulp.watch(paths.images.src, images)
+  // gulp.watch(paths.images.src, images)
 }
 
 /*
@@ -171,7 +171,7 @@ exports.stylesMin = stylesMin
 exports.unusedCSS = unusedCSS
 exports.scripts = scripts
 exports.scriptsCore = scriptsCore
-exports.images = images
+// exports.images = images
 exports.watch = watch
 exports.serve = serve
 
@@ -180,8 +180,14 @@ exports.serve = serve
  */
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, stylesMin, scripts, scriptsCore, images),
-  unusedCSS
+  gulp.parallel(
+    styles,
+    stylesMin,
+    scripts,
+    scriptsCore
+    // images
+  ),
+  // unusedCSS
 )
 
 /*

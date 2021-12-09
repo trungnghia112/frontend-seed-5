@@ -1,0 +1,27 @@
+.table-styled {
+  background-color: rgba($color: #10468e, $alpha: 0.7);
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: map-get($map: $spacers, $key: 4);
+  &.table > :not(caption) > * > * {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .tb-col-name {
+    width: 200px;
+  }
+  .tb-col-token {
+    width: 200px;
+  }
+  .tb-col-percent {
+    width: 160px;
+  }
+  .tb-col-lg-auto {
+    min-width: 250px;
+    @include media-breakpoint-up(lg) {
+      min-width: none;
+    }
+  }
+}

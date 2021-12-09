@@ -1,6 +1,230 @@
 /* ==========================================================================
 Content
 ========================================================================== */
-.app-loading {
+// .app-loading {
+//  display: none;
+// }
+
+.section-hero {
+  background-image: url('../images/bg/bg-hero.jpg');
+}
+.section-video-trailer {
+  background-image: url('../images/bg/bg-video-trailer.jpg');
+}
+
+.section-about {
+  background-image: url('../images/bg/bg-about.jpg');
+}
+
+.section-gamesystem {
+  background-image: url('../images/bg/bg-gamesystem.jpg');
+}
+
+.section-playtotrade {
+  background-image: url('../images/bg/bg-playtotrade.jpg');
+}
+
+.section-tokenomics {
+  background-image: url('../images/bg/bg-tokenomics.jpg');
+}
+
+.section-tokenomics-2 {
+  background-image: url('../images/bg/bg-tokenomics.jpg');
+}
+
+.section-roadmap {
+  background-image: url('../images/bg/bg-roadmap.jpg');
+}
+
+.section-roadmap-update {
+  background-image: url('../images/bg/bg-roadmap.jpg');
+}
+
+.section-team {
+  background-image: url('../images/bg/bg-team.jpg');
+}
+
+.section-advisor {
+  background-image: url('../images/bg/bg-advisor.jpg');
+}
+
+.section-investor {
+  background-image: url('../images/bg/bg-investor.jpg');
+}
+
+.section-partner {
+  background-image: url('../images/bg/bg-partner.jpg');
+}
+
+.wrapper {
+  overflow: hidden;
+}
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  padding-top: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: $grid-gutter-width;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: map-get($spacers, 4);
+  color: $primary;
+}
+
+.section-title-sub {
+  color: #ffffff;
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  margin-bottom: map-get($spacers, 4);
+}
+
+.slider-items {
+  margin: 0 auto;
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    width: 46px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+    &.slick-disabled {
+      visibility: hidden;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+    background-image: url('../images/slide-prev.png');
+  }
+
+  .slick-next {
+    right: 0;
+    background-image: url('../images/slide-next.png');
+  }
+  @include media-breakpoint-up(lg) {
+    .slick-prev {
+      left: -$grid-gutter-width * 0.5;
+    }
+    .slick-next {
+      right: -$grid-gutter-width * 0.5;
+    }
+  }
+}
+
+.list-styled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url('../images/list-styled.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+    }
+  }
+}
+
+#fp-nav {
+  ul li a {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+
+    span {
+      background-color: #ffffff;
+    }
+
+    &.active {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.nav-social {
+  @include center(false, true);
+  position: fixed;
+  left: 0;
+  z-index: $zindex-offcanvas-backdrop - 1;
   display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+  .nav-social-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    > li {
+      margin-bottom: 5px;
+      a {
+        display: inline-block;
+        background-image: url(../images/bg/gamesystem-el.png);
+        background-size: cover;
+        padding: 8px;
+        width: 50px;
+        height: 50px;
+        img {
+          width: 100%;
+          // filter: grayscale(0%);
+          opacity: 1;
+          @include transition($transition-base);
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          img {
+            // filter: grayscale(100%);
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+.fp-responsive {
+  .section,
+  .fp-tableCell {
+    // height: auto !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .is-animated {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
 }
