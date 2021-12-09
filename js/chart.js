@@ -399,7 +399,7 @@
         {
           name: '',
           type: 'pie',
-          radius: ['35%', '70%'],
+          radius: ['35%', '60%'],
           label: {
             alignTo: 'edge',
             // alignTo: 'labelLine',

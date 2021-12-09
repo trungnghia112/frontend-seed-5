@@ -4,38 +4,54 @@
  Author:     trungnghia112 <trungnghia112@gmail.com>
 
  -----------------------------------------------------------------------------------*/
-
-if (Modernizr.touch === true && window.innerWidth <= 767) {
-  //alert('Touch Screen');
-} else {
-
-}
-
 (function() {
   'use strict'
 
-  /* ==================================================
-  # Get scroll bar width
-  ===================================================*/
-  function getBarwidth() {
-    // Create the measurement node
-    let scrollDiv = document.createElement('div')
-    scrollDiv.className = 'scrollbar-measure'
-    document.body.appendChild(scrollDiv)
+  // var breakpointMobileSize = 991
 
-    // Get the scrollbar width
-    let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth
-    //console.warn(scrollbarWidth); // Mac:  15
-
-    // Delete the DIV
-    document.body.removeChild(scrollDiv)
-    // console.log(scrollbarWidth);
-    return scrollbarWidth
+  function slider() {
+    $('.js-slider-items').slick({
+      infinite: false
+    })
   }
 
+  function carousel() {
+    $('.js-carousel-items').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 1025,
+          settings: {
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    })
+  }
 
   function init() {
-    getBarwidth()
+    slider()
+    carousel()
   }
 
   init()

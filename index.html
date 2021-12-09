@@ -1361,10 +1361,9 @@
 <script src='third_party/bootstrap.bundle.min.js'></script>
 <script src='third_party/modernizr.min.js'></script>
 <script src='third_party/lazysizes.min.js'></script>
-<!--<script src='third_party/spine-player/spine-player.js'></script>-->
-<!--<script src='third_party/fullpage.js/dist/fullpage.js'></script>-->
-<!--<script src='third_party/fullpage.js/dist/fullpage.extensions.min.js'></script>-->
-<!--<script src='third_party/slick-carousel/slick/slick.min.js'></script>-->
+<script src='third_party/spine-player/spine-player.js'></script>
+<script src='third_party/TweenMax/TweenMax.min.js'></script>
+<script src='third_party/slick-carousel/slick/slick.min.js'></script>
 <!-- End Core JavaScript -->
 
 <!-- JavaScript -->
@@ -1406,6 +1405,66 @@
       scriptLibrary.src = 'third_party/TweenMax/TweenMax.min.js?v=3.2'
       document.head.appendChild(scriptLibrary)
     })
+  }
+</script>
+<script>
+  new spine.SpinePlayer('dragon', {
+    jsonUrl: 'Anim/[R]DragonFlame/[R]Dragon.json?v=1',
+    atlasUrl: 'Anim/[R]DragonFlame/[R]Dragon.atlas.txt',
+    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+    alpha: true,
+    showControls: false
+  })
+
+  new spine.SpinePlayer('sdragon', {
+    jsonUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.json?v=1',
+    atlasUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.atlas.txt',
+    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+    alpha: true,
+    showControls: false
+  })
+
+  new spine.SpinePlayer('slider-1', {
+    jsonUrl: 'Anim/[N]Mouse/[N]Mouse.json',
+    atlasUrl: 'Anim/[N]Mouse/[N]Mouse.atlas',
+    animations: ['NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+    alpha: true,
+    showControls: false
+  })
+
+  new spine.SpinePlayer('slider-2', {
+    jsonUrl: 'Anim/[R]Dragon/[R]Dragon.json?v=1',
+    atlasUrl: 'Anim/[R]Dragon/[R]Dragon.atlas.txt',
+    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+    alpha: true,
+    showControls: false
+  })
+
+  new spine.SpinePlayer('slider-3', {
+    jsonUrl: 'Anim/[SR]Dragon/[SR]Dragon.json',
+    atlasUrl: 'Anim/[SR]Dragon/[SR]Dragon.atlas.txt',
+    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+    alpha: true,
+    showControls: false
+  })
+</script>
+<script>
+  if (Modernizr.touch === true && window.innerWidth <= breakpointMobileSize) {
+    //alert('Touch Screen');
+  } else {
+    if (document.getElementById('fullpage')) {
+      document.getElementById('fullpage').addEventListener('lazybeforeunveil', function() {
+        var scriptLibrary = document.createElement('script')
+        scriptLibrary.onload = function() {
+          var scriptChart = document.createElement('script')
+          scriptChart.src = 'js/roadmap.js?v=3.2'
+          document.body.appendChild(scriptChart)
+        }
+
+        scriptLibrary.src = 'third_party/fullpage.js/dist/fullpage.js?v=3.2'
+        document.head.appendChild(scriptLibrary)
+      })
+    }
   }
 </script>
 <!-- End JavaScript -->
