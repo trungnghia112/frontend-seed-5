@@ -148,9 +148,10 @@ function serve() {
   })
   // gulp.watch(paths.scripts.src, scripts)
   // gulp.watch(paths.scriptsCore.src, scriptsCore)
-  // gulp.watch(paths.styles.src, styles)
+  gulp.watch(paths.styles.src, styles)
   // gulp.watch(paths.stylesMin.src, stylesMin)
   // gulp.watch(paths.images.src, images)
+  gulp.watch(paths.styles.src).on('change', server.reload)
   gulp.watch(paths.html.src).on('change', server.reload)
 }
 

@@ -65,17 +65,26 @@
   .gamesystem-slide-item {
     color: #ffffff;
     text-align: center;
-    margin-left: -15%;
-    margin-right: -15%;
+    //margin-left: -15%;
+    //margin-right: -15%;
     div {
       width: 100%;
     }
+
     p {
       margin-top: 15px;
       margin-bottom: 0;
       font-size: 14px;
     }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+      margin: auto;
+    }
   }
+
   .gamesystem-slide-item-footage {
     width: 100%;
     max-width: 300px;
@@ -83,12 +92,15 @@
     margin: auto;
     margin-top: -12%;
   }
+
   .gamesystem-slide-item-img {
     position: relative;
+
     > img {
       width: 100%;
       height: auto;
     }
+
     > div {
       position: absolute;
       top: 0;

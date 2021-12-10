@@ -38,15 +38,12 @@ Header
 .navbar-brand {
   img {
     height: 50px;
+    margin-top: -5px;
+    margin-bottom: -5px;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  .navbar-brand {
-    img {
-      height: 100px;
-    }
-  }
   .header {
     .container-fluid {
       position: relative;
@@ -58,6 +55,7 @@ Header
 
       img {
         height: 80px;
+        margin: 0;
       }
     }
   }

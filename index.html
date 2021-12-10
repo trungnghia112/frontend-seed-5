@@ -66,7 +66,7 @@
       .app-loading {
           background: rgb(63, 94, 251);
           background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           right: 0;
@@ -199,8 +199,9 @@
   <noscript>
     <link href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap' rel='stylesheet'>
   </noscript>
-  <link rel='stylesheet' href='css/style.css'>
-  <link rel='stylesheet' href='customs/style.css'>
+  <link rel='stylesheet' href='dist/app.min.css?v=1.0.5'>
+  <!--    <link rel='stylesheet' href='css/style.css?v=1.0.5'>-->
+  <link rel='stylesheet' href='customs/style.css?v=1.0.5'>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src='https://www.googletagmanager.com/gtag/js?id=UA-159081823-22'></script>
   <script>
@@ -230,7 +231,7 @@
     <img src='images/logo_loading.png' alt='' class='loading-logo'>
   </div>
 </div>
-<div class='wrapper' id='site_wrapper'>
+<div class='wrapper'>
   <header class='header' id='header'>
     <!-- <div class='top-head text-center'>
       <div class='alert alert-warning alert-dismissible fade show' role='alert'>
@@ -251,21 +252,21 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul class='navbar-nav me-auto'>
-            <li class='nav-item'>
+            <li data-menuanchor='video-trailer' class='nav-item'>
               <a class='nav-link' href='#video-trailer'>Video Trailer</a>
             </li>
-            <li class='nav-item'>
+            <li data-menuanchor='about' class='nav-item'>
               <a class='nav-link' href='#about'>About</a>
             </li>
-            <li class='nav-item'>
+            <li data-menuanchor='gamesystem' class='nav-item'>
               <a class='nav-link' href='#gamesystem'>Game system</a>
             </li>
           </ul>
           <ul class='navbar-nav'>
-            <li class='nav-item'>
+            <li data-menuanchor='roadmap' class='nav-item'>
               <a class='nav-link' href='#roadmap'>Roadmap</a>
             </li>
-            <li class='nav-item'>
+            <li data-menuanchor='investors' class='nav-item'>
               <a class='nav-link' href='#investors'>Investors & Partners</a>
             </li>
             <li class='nav-item mx-0 mx-lg-3'>
@@ -277,58 +278,54 @@
       </div>
     </nav>
   </header>
-  <main class='main' id='main'>
+  <div class='main'>
     <div id='fullpage'>
-      <div data-anchor='hero' class='fp-auto-height-responsive section section-hero'>
-        <div class='video-container'>
-          <div class='video-container-overlay'>
-            <div class='firefly-wrap'>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-              <div class='firefly'></div>
-            </div>
-            
-            <div id='sdragon' class='video-container-item video-container-item-2'>
-            </div>
-            <div class='section-hero-content'>
-              <div class='hero-content-cooperate is-animated'>
-                <div class='hero-content-logo'>
-                  <img loading='lazy' src='images/partners/logo.png?v=3.2' alt=''>
-                </div>
-                <div class='hero-content-text'>X</div>
-                <div class='hero-content-logo'>
-                  <img loading='lazy' src='images/partners/byte-dance.png?v=3.2' alt=''>
-                </div>
+      <div class='section section-hero'>
+        <div class='section-hero-container'>
+          <div class='firefly-wrap'>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+            <div class='firefly'></div>
+          </div>
+          <div class='section-hero-content'>
+            <div class='hero-content-cooperate is-animated'>
+              <div class='hero-content-logo'>
+                <img loading='lazy' src='images/partners/logo.png?v=3.2' alt=''>
               </div>
-              <div class='hero-content-buttons'>
-                <div class='container-fluid'>
-                  <div class='row'>
-                    <div class='col-4 button-col-android is-animated text-center'>
-                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                         data-bs-target='#modalComingSoon'>
-                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
-                             viewBox='0 0 299.679 299.679' xml:space='preserve'>
+              <div class='hero-content-text'>X</div>
+              <div class='hero-content-logo'>
+                <img loading='lazy' src='images/partners/byte-dance.png?v=3.2' alt=''>
+              </div>
+            </div>
+            <div class='hero-content-buttons'>
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col-4 button-col-android is-animated text-center'>
+                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                       data-bs-target='#modalComingSoon'>
+                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
+                           viewBox='0 0 299.679 299.679' xml:space='preserve'>
                             <path id='XMLID_221_'
                                   d='M181.122,299.679c10.02,0,18.758-8.738,18.758-18.758v-43.808h12.525c7.516,0,12.525-5.011,12.525-12.525
                       V99.466H74.749v125.123c0,7.515,5.01,12.525,12.525,12.525H99.8v43.808c0,10.02,8.736,18.758,18.758,18.758
                       c10.019,0,18.756-8.738,18.756-18.758v-43.808h25.051v43.808C162.364,290.941,171.102,299.679,181.122,299.679z' />
-                          <path id='XMLID_222_' d='M256.214,224.589c10.02,0,18.756-8.737,18.756-18.758v-87.615c0-9.967-8.736-18.75-18.756-18.75
+                        <path id='XMLID_222_' d='M256.214,224.589c10.02,0,18.756-8.737,18.756-18.758v-87.615c0-9.967-8.736-18.75-18.756-18.75
                       c-10.021,0-18.758,8.783-18.758,18.75v87.615C237.456,215.851,246.192,224.589,256.214,224.589z' />
-                          <path id='XMLID_223_' d='M43.466,224.589c10.021,0,18.758-8.737,18.758-18.758v-87.615c0-9.967-8.736-18.75-18.758-18.75
+                        <path id='XMLID_223_' d='M43.466,224.589c10.021,0,18.758-8.737,18.758-18.758v-87.615c0-9.967-8.736-18.75-18.758-18.75
                       c-10.02,0-18.756,8.783-18.756,18.75v87.615C24.71,215.851,33.446,224.589,43.466,224.589z' />
-                          <path id='XMLID_224_' d='M209.899,1.89c-2.504-2.52-6.232-2.52-8.736,0l-16.799,16.743l-0.775,0.774
+                        <path id='XMLID_224_' d='M209.899,1.89c-2.504-2.52-6.232-2.52-8.736,0l-16.799,16.743l-0.775,0.774
                       c-9.961-4.988-21.129-7.479-33.566-7.503c-0.061,0-0.121-0.002-0.182-0.002h-0.002c-0.063,0-0.121,0.002-0.184,0.002
                       c-12.436,0.024-23.604,2.515-33.564,7.503l-0.777-0.774L98.516,1.89c-2.506-2.52-6.232-2.52-8.736,0
                       c-2.506,2.506-2.506,6.225,0,8.729l16.25,16.253c-5.236,3.496-9.984,7.774-14.113,12.667C82.032,51.256,75.727,66.505,74.86,83.027
@@ -339,15 +336,15 @@
                       c-5.182,0-9.383-4.201-9.383-9.383c0-5.182,4.201-9.383,9.383-9.383c5.182,0,9.383,4.201,9.383,9.383
                       C190.528,60.862,186.327,65.063,181.145,65.063z' />
                           </svg>
-                        <span class='d-none d-lg-inline-block ms-1'>ANDROID</span>
-                      </a>
-                      <p>Coming soon...</p>
-                    </div>
-                    <div class='col-4 button-col-ios is-animated text-center'>
-                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                         data-bs-target='#modalComingSoon'>
-                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
-                             xml:space='preserve'>
+                      <span class='d-none d-lg-inline-block ms-1'>ANDROID</span>
+                    </a>
+                    <p>Coming soon...</p>
+                  </div>
+                  <div class='col-4 button-col-ios is-animated text-center'>
+                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                       data-bs-target='#modalComingSoon'>
+                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
+                           xml:space='preserve'>
                             <path id='XMLID_229_' d='M40.738,112.119c-25.785,44.745-9.393,112.648,19.121,153.82C74.092,286.523,88.502,305,108.239,305
                       c0.372,0,0.745-0.007,1.127-0.022c9.273-0.37,15.974-3.225,22.453-5.984c7.274-3.1,14.797-6.305,26.597-6.305
                       c11.226,0,18.39,3.101,25.318,6.099c6.828,2.954,13.861,6.01,24.253,5.815c22.232-0.414,35.882-20.352,47.925-37.941
@@ -357,52 +354,53 @@
                       c-1.613-0.161-3.278-0.242-4.95-0.242c-13.056,0-25.563,4.931-35.611,8.893c-6.936,2.735-12.927,5.097-17.059,5.097
                       c-4.643,0-10.668-2.391-17.645-5.159c-9.33-3.703-19.905-7.899-31.1-7.899c-0.267,0-0.53,0.003-0.789,0.008
                       C78.894,73.643,54.298,88.535,40.738,112.119z' />
-                          <path id='XMLID_230_' d='M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
+                        <path id='XMLID_230_' d='M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
                       c0.155,1.17,1.107,2.073,2.284,2.164c1.064,0.083,2.15,0.125,3.232,0.126c15.413,0,32.04-8.527,43.395-22.257
                       c11.951-14.498,17.994-33.104,16.166-49.77C214.544,0.921,213.395-0.049,212.101,0.002z' />
                           </svg>
-                        <span class='d-none d-lg-inline-block ms-1'>IOS</span>
-                      </a>
-                      <p>Coming soon...</p>
-                    </div>
-                    <div class='col-4 button-col-web is-animated text-center'>
-                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                         data-bs-target='#modalComingSoon'>
-                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
-                             xml:space='preserve'>
+                      <span class='d-none d-lg-inline-block ms-1'>IOS</span>
+                    </a>
+                    <p>Coming soon...</p>
+                  </div>
+                  <div class='col-4 button-col-web is-animated text-center'>
+                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                       data-bs-target='#modalComingSoon'>
+                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
+                           xml:space='preserve'>
                             <path id='XMLID_17_' d='M95.506,152.511c0,31.426,25.567,56.991,56.994,56.991c31.425,0,56.99-25.566,56.99-56.991
                       c0-31.426-25.565-56.993-56.99-56.993C121.073,95.518,95.506,121.085,95.506,152.511z' />
-                          <path id='XMLID_18_' d='M283.733,77.281c0.444-0.781,0.436-1.74-0.023-2.513c-13.275-22.358-32.167-41.086-54.633-54.159
+                        <path id='XMLID_18_' d='M283.733,77.281c0.444-0.781,0.436-1.74-0.023-2.513c-13.275-22.358-32.167-41.086-54.633-54.159
                       C205.922,7.134,179.441,0.012,152.5,0.012c-46.625,0-90.077,20.924-119.215,57.407c-0.643,0.804-0.727,1.919-0.212,2.81
                       l42.93,74.355c0.45,0.78,1.28,1.25,2.164,1.25c0.112,0,0.226-0.008,0.339-0.023c1.006-0.137,1.829-0.869,2.083-1.852
                       c8.465-32.799,38.036-55.706,71.911-55.706c2.102,0,4.273,0.096,6.455,0.282c0.071,0.007,0.143,0.01,0.214,0.01H281.56
                       C282.459,78.545,283.289,78.063,283.733,77.281z' />
-                          <path id='XMLID_19_' d='M175.035,224.936c-0.621-0.803-1.663-1.148-2.646-0.876c-6.457,1.798-13.148,2.709-19.889,2.709
+                        <path id='XMLID_19_' d='M175.035,224.936c-0.621-0.803-1.663-1.148-2.646-0.876c-6.457,1.798-13.148,2.709-19.889,2.709
                       c-28.641,0-55.038-16.798-67.251-42.794c-0.03-0.064-0.063-0.126-0.098-0.188L23.911,77.719c-0.446-0.775-1.272-1.25-2.165-1.25
                       c-0.004,0-0.009,0-0.013,0c-0.898,0.005-1.725,0.49-2.165,1.272C6.767,100.456,0,126.311,0,152.511
                       c0,36.755,13.26,72.258,37.337,99.969c23.838,27.435,56.656,45.49,92.411,50.84c0.124,0.019,0.248,0.027,0.371,0.027
                       c0.883,0,1.713-0.47,2.164-1.25l42.941-74.378C175.732,226.839,175.657,225.739,175.035,224.936z' />
-                          <path id='XMLID_20_' d='M292.175,95.226h-85.974c-1.016,0-1.931,0.615-2.314,1.555c-0.384,0.94-0.161,2.02,0.564,2.73
+                        <path id='XMLID_20_' d='M292.175,95.226h-85.974c-1.016,0-1.931,0.615-2.314,1.555c-0.384,0.94-0.161,2.02,0.564,2.73
                       c14.385,14.102,22.307,32.924,22.307,53c0,15.198-4.586,29.824-13.263,42.298c-0.04,0.058-0.077,0.117-0.112,0.178l-61.346,106.252
                       c-0.449,0.778-0.446,1.737,0.007,2.513c0.449,0.767,1.271,1.237,2.158,1.237c0.009,0,0.019,0,0.028,0
                       c40.37-0.45,78.253-16.511,106.669-45.222C289.338,231.032,305,192.941,305,152.511c0-19.217-3.532-37.956-10.498-55.698
                       C294.126,95.855,293.203,95.226,292.175,95.226z' />
                           </svg>
-                        <span class='d-none d-lg-inline-block ms-1'>WEB</span>
-                      </a>
-                      <p>Coming soon...</p>
-                    </div>
+                      <span class='d-none d-lg-inline-block ms-1'>WEB</span>
+                    </a>
+                    <p>Coming soon...</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div id='dragon' class='video-container-item video-container-item-1'>
-            </div>
+          </div>
+          <div id='dragon' class='video-container-item video-container-item-1'>
+          </div>
+          <div id='sdragon' class='video-container-item video-container-item-2'>
           </div>
         </div>
       </div>
-      <div data-anchor='video-trailer' class='fp-auto-height-responsive section section-video-trailer'>
-        <div class='container'>
+      <div class='section section-video-trailer'>
+        <div class='container section-container'>
           <h2 class='section-title'>Video Trailer</h2>
           <div class='section-video-trailer-content is-animated'>
             <div class='ratio ratio-16x9'>
@@ -412,8 +410,8 @@
           </div>
         </div>
       </div>
-      <div data-anchor='about' class='fp-auto-height-responsive section section-about'>
-        <div class='container'>
+      <div class='section section-about'>
+        <div class='container section-container'>
           <h2 class='section-title'>About Etermon</h2>
           <p class='section-title-sub'>
             In 3033, humanity has a tremendous development. Human begins looking for a new civilized outside the
@@ -427,7 +425,7 @@
             planet. The explorer has no alternative. He has to catch and train the Etermon to fight against the
             master. Then, he can have a chance to go home.
           </p>
-          <div class='section-about-content'>
+          <div class='section-content'>
             <div class='row row-about-content'>
               <div class='col-lg-4 is-animated'>
                 <div class='about-content-box'>
@@ -472,12 +470,12 @@
           </div>
         </div>
       </div>
-      <div data-anchor='gamesystem' class='fp-auto-height-responsive section section-gamesystem'>
-        <div class='container'>
+      <div class='section section-gamesystem'>
+        <div class='container section-container'>
           <h2 class='section-title'>Gamesystem</h2>
-          <div class='section-gamesystem-content'>
+          <div class='section-content'>
             <div class='row align-items-center'>
-              <div class='col-lg-5 is-animated'>
+              <div class='col-lg-6 is-animated'>
                 <div class='gamesystem-content-box'>
                   <div class='gamesystem-content-header'>
                     <h3 class='h3'>Etermon</h3>
@@ -536,36 +534,28 @@
                   </div>
                 </div>
               </div>
-              <div class='col-lg-7 is-animated'>
+              <div class='col-lg-6 is-animated'>
                 <div class='slider-items gamesystem-slider js-slider-items'>
                   <div class='slider-item'>
                     <div class='gamesystem-slide-item'>
                       <div class='gamesystem-slide-item-img'>
-                        <img src='images/slide-item-size.png' alt=''>
-                        <div class='gamesystem-1' id='slider-1'></div>
+                        <img src='images/slide-1.png' alt=''>
+                        <!--<img src='images/slide-item-size.png' alt=''>
+                        <div class='gamesystem-1' id='slider-1'></div>-->
                       </div>
-                      <img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=3.2'
-                           alt=''>
+                      <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=3.2'
+                           alt=''>-->
                     </div>
                   </div>
                   <div class='slider-item'>
                     <div class='gamesystem-slide-item'>
                       <div class='gamesystem-slide-item-img'>
-                        <img src='images/slide-item-size.png' alt=''>
-                        <div class='gamesystem-2' id='slider-2'></div>
+                        <img src='images/slide-2.png' alt=''>
+                        <!--<img src='images/slide-item-size.png' alt=''>
+                        <div class='gamesystem-2' id='slider-2'></div>-->
                       </div>
-                      <img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=3.2'
-                           alt=''>
-                    </div>
-                  </div>
-                  <div class='slider-item'>
-                    <div class='gamesystem-slide-item'>
-                      <div class='gamesystem-slide-item-img'>
-                        <img src='images/slide-item-size.png' alt=''>
-                        <div class='gamesystem-3' id='slider-3'></div>
-                      </div>
-                      <img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=3.2'
-                           alt=''>
+                      <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=3.2'
+                           alt=''>-->
                     </div>
                   </div>
                 </div>
@@ -574,10 +564,10 @@
           </div>
         </div>
       </div>
-      <div data-anchor='playtotrade' class='fp-auto-height-responsive section section-playtotrade'>
-        <div class='container'>
+      <div class='section section-playtotrade'>
+        <div class='container section-container'>
           <h2 class='section-title'>Play to Trade - Trade to Earn</h2>
-          <div class='section-playtotrade-content'>
+          <div class='section-content'>
             <div class='section-playtotrade-img is-animated'>
               <img loading='lazy' class='w-100' src='images/playtotrade-item.png?v=3.2' alt=''>
             </div>
@@ -593,16 +583,16 @@
           </div>
         </div>
       </div>
-      <div data-anchor='tokenomics' class='fp-auto-height-responsive section section-tokenomics'>
-        <div class='container'>
+      <div class='section section-tokenomics'>
+        <div class='container section-container'>
           <h2 class='section-title'>Tokenomics</h2>
-          <div class='section-tokenomics-content'>
+          <div class='section-content'>
             <div class='row'>
               <div class='col-lg-8 is-animated'>
-                <div class='section-tokenomics-content-chart lazyload' id='js-token-chart'></div>
+                <div class='tokenomics-content-chart lazyload' id='js-token-chart'></div>
               </div>
               <div class='col-lg-4 is-animated'>
-                <div class='section-tokenomics-content-table'>
+                <div class='tokenomics-content-table'>
                   <div class='card-styled tokenomics-card'>
                     <div class='card-styled-header'>
                       <h3 class='h3'>Etermon</h3>
@@ -644,114 +634,116 @@
           </div>
         </div>
       </div>
-      <div data-anchor='tokenomics-2' class='fp-auto-height-responsive section section-tokenomics-2'>
-        <div class='container mt-4 pt-2'>
+      <div class='section section-tokenomics-2'>
+        <div class='container section-container'>
           <h2 class='section-title'>Tokenomics</h2>
-          <div class='table-responsive table-tokenomics-top is-animated' id='tokenomics-2-1'>
-            <table class='table table-styled'>
-              <thead>
-              <tr>
-                <th class='tb-col-name'>TOKEN SALE</th>
-                <th class='text-end tb-col-token'>TOKEN ALLOCATION</th>
-                <th class='text-center tb-col-percent'>PRICE</th>
-                <th class='text-center tb-col-percent'>PERCENTAGE</th>
-                <th class='tb-col-lg-auto'>TOKEN RELEASE SCHEDULE</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th class='tb-col-name' scope='row'>Seed</th>
-                <td class='text-end'>40.000.000</td>
-                <td class='text-center'>$0.010</td>
-                <td class='text-center'>20%</td>
-                <td>10% at TGE and linear distribution over 15 months</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Private</th>
-                <td class='text-end'>145.000.000</td>
-                <td class='text-center'>$0.015</td>
-                <td class='text-center'>72.5%</td>
-                <td>7% at TGE and linear distribution over 15 months</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Public IDO</th>
-                <td class='text-end'>15.000.000</td>
-                <td class='text-center'>$0.020</td>
-                <td class='text-center'>7.5%</td>
-                <td>30% at TGE and 15% each month thereafter</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Total</th>
-                <th scope='row' class='text-end'>200.000.000</th>
-                <th scope='row' class='text-end'></th>
-                <th scope='row' class='text-center'>100%</th>
-                <th scope='row'></th>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class='table-responsive table-tokenomics-bottom is-animated' id='tokenomics-2-2'>
-            <table class='table table-styled'>
-              <thead>
-              <tr>
-                <th colspan='4'>TOKEN ALLOCATION</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th class='tb-col-name' scope='row'>Token Sale</th>
-                <td class='text-end tb-col-token'>200.000.000</td>
-                <td class='text-center tb-col-percent'>20%</td>
-                <td class='tb-col-lg-auto'>Unlocked as per token release schedule</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Team</th>
-                <td class='text-end tb-col-token'>190.000.000</td>
-                <td class='text-center tb-col-percent'>19%</td>
-                <td class='tb-col-lg-auto'>1 year fully locked, then vest linearly over 1 year</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Advisors</th>
-                <td class='text-end tb-col-token'>40.000.000</td>
-                <td class='text-center tb-col-percent'>4%</td>
-                <td class='tb-col-lg-auto'>6 months fully locked, then linear distribution over 12 months</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Ecosystem/Staking/Airdrop</th>
-                <td class='text-end tb-col-token'>350.000.000</td>
-                <td class='text-center tb-col-percent'>35%</td>
-                <td class='tb-col-lg-auto'>Strategic release as per game including airdrop, rewards</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Liquidity</th>
-                <td class='text-end tb-col-token'>50.000.000</td>
-                <td class='text-center tb-col-percent'>5%</td>
-                <td class='tb-col-lg-auto'>Locked on CEX/DEX</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Marketing/Partnership</th>
-                <td class='text-end tb-col-token'>120.000.000</td>
-                <td class='text-center tb-col-percent'>12%</td>
-                <td class='tb-col-lg-auto'>1 month fully locked, 15% month 2, then released at 5% per month</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Reserve</th>
-                <td class='text-end tb-col-token'>50.000.000</td>
-                <td class='text-center tb-col-percent'>5%</td>
-                <td class='tb-col-lg-auto'>Locked for 12 months</td>
-              </tr>
-              <tr>
-                <th class='tb-col-name' scope='row'>Total Supply</th>
-                <th scope='row' class='text-end tb-col-token'>1.000.000.000</th>
-                <th scope='row' class='text-center tb-col-percent'>100%</th>
-                <th scope='row'></th>
-              </tr>
-              </tbody>
-            </table>
+          <div class='section-content'>
+            <div class='table-responsive table-tokenomics-top is-animated' id='tokenomics-2-1'>
+              <table class='table table-styled'>
+                <thead>
+                <tr>
+                  <th class='tb-col-name'>TOKEN SALE</th>
+                  <th class='text-end tb-col-token'>TOKEN ALLOCATION</th>
+                  <th class='text-center tb-col-percent'>PRICE</th>
+                  <th class='text-center tb-col-percent'>PERCENTAGE</th>
+                  <th class='tb-col-lg-auto'>TOKEN RELEASE SCHEDULE</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Seed</th>
+                  <td class='text-end'>40.000.000</td>
+                  <td class='text-center'>$0.010</td>
+                  <td class='text-center'>20%</td>
+                  <td>10% at TGE and linear distribution over 15 months</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Private</th>
+                  <td class='text-end'>145.000.000</td>
+                  <td class='text-center'>$0.015</td>
+                  <td class='text-center'>72.5%</td>
+                  <td>7% at TGE and linear distribution over 15 months</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Public IDO</th>
+                  <td class='text-end'>15.000.000</td>
+                  <td class='text-center'>$0.020</td>
+                  <td class='text-center'>7.5%</td>
+                  <td>30% at TGE and 15% each month thereafter</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Total</th>
+                  <th scope='row' class='text-end'>200.000.000</th>
+                  <th scope='row' class='text-end'></th>
+                  <th scope='row' class='text-center'>100%</th>
+                  <th scope='row'></th>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class='table-responsive table-tokenomics-bottom is-animated' id='tokenomics-2-2'>
+              <table class='table table-styled'>
+                <thead>
+                <tr>
+                  <th colspan='4'>TOKEN ALLOCATION</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Token Sale</th>
+                  <td class='text-end tb-col-token'>200.000.000</td>
+                  <td class='text-center tb-col-percent'>20%</td>
+                  <td class='tb-col-lg-auto'>Unlocked as per token release schedule</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Team</th>
+                  <td class='text-end tb-col-token'>190.000.000</td>
+                  <td class='text-center tb-col-percent'>19%</td>
+                  <td class='tb-col-lg-auto'>1 year fully locked, then vest linearly over 1 year</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Advisors</th>
+                  <td class='text-end tb-col-token'>40.000.000</td>
+                  <td class='text-center tb-col-percent'>4%</td>
+                  <td class='tb-col-lg-auto'>6 months fully locked, then linear distribution over 12 months</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Ecosystem/Staking/Airdrop</th>
+                  <td class='text-end tb-col-token'>350.000.000</td>
+                  <td class='text-center tb-col-percent'>35%</td>
+                  <td class='tb-col-lg-auto'>Strategic release as per game including airdrop, rewards</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Liquidity</th>
+                  <td class='text-end tb-col-token'>50.000.000</td>
+                  <td class='text-center tb-col-percent'>5%</td>
+                  <td class='tb-col-lg-auto'>Locked on CEX/DEX</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Marketing/Partnership</th>
+                  <td class='text-end tb-col-token'>120.000.000</td>
+                  <td class='text-center tb-col-percent'>12%</td>
+                  <td class='tb-col-lg-auto'>1 month fully locked, 15% month 2, then released at 5% per month</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Reserve</th>
+                  <td class='text-end tb-col-token'>50.000.000</td>
+                  <td class='text-center tb-col-percent'>5%</td>
+                  <td class='tb-col-lg-auto'>Locked for 12 months</td>
+                </tr>
+                <tr>
+                  <th class='tb-col-name' scope='row'>Total Supply</th>
+                  <th scope='row' class='text-end tb-col-token'>1.000.000.000</th>
+                  <th scope='row' class='text-center tb-col-percent'>100%</th>
+                  <th scope='row'></th>
+                </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-      <div data-anchor='roadmap' class='fp-auto-height-responsive section section-roadmap-update'>
+      <div class='section section-roadmap-update'>
         <div id='frame-rocket' class='frame-wrap lazyload'>
           <div class='frame'>
             <div class='loader'>
@@ -887,17 +879,16 @@
             </ul>
           </div>
         </div>
-      
       </div>
-      <div data-anchor='core-team' class='fp-auto-height-responsive section section-team'>
-        <div class='container'>
+      <div class='section section-core-team'>
+        <div class='container section-container'>
           <h2 class='section-title'>CORE TEAM</h2>
           <p class='section-title-sub'>
             Every member of the team is an expert in different fields, but we know that teamwork is the essential key
             to the project's success. Therefore, we always work closely together for the same goal, which is to help
             our investors' dream come true
           </p>
-          <div class='section-team-content profile-box-wrap'>
+          <div class='section-content profile-box-wrap'>
             <div class='section-team-slider slider-items js-carousel-items is-animated'>
               <div class='slider-item'>
                 <div class='profile-box'>
@@ -1148,10 +1139,10 @@
           </div>
         </div>
       </div>
-      <div data-anchor='advisors' class='fp-auto-height-responsive section section-advisor'>
-        <div class='container'>
+      <div class='section section-advisors'>
+        <div class='container section-container'>
           <h2 class='section-title'>Advisors</h2>
-          <div class='section-advisor-content mt-5 profile-box-wrap'>
+          <div class='section-content profile-box-wrap'>
             <div class='section-advisor-slider slider-items js-carousel-items is-animated'>
               <div class='slider-item'>
                 <div class='profile-box'>
@@ -1194,79 +1185,58 @@
           </div>
         </div>
       </div>
-      <div data-anchor='investors' class='fp-auto-height-responsive section section-investor'>
-        <div class='container'>
+      <div class='section section-investors'>
+        <div class='container section-container'>
           <h2 class='section-title'>Investors</h2>
-          <div class='section-partner-content is-animated'>
-            <ul class='section-partner-list'>
-              <li><img loading='lazy' src='dummy/partner/1.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/2.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/3.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/4.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/5.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/6.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/7.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/8.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/9.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/10.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/11.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/12.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/13.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/14.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/18.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/15.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/16.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/17.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/19.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/20.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/21.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/22.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/23.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/24.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/25.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/26.png?v=3.2' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/27.png?v=3.2' alt=''></li>
+          <div class='section-partners-content is-animated'>
+            <ul class='section-list-items'>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
             </ul>
           </div>
         </div>
       </div>
-      <div data-anchor='partners' class='fp-auto-height-responsive section section-partner'>
-        <div class='d-flex h-100 flex-column section-partner-space'>
-          <div class='container mb-4'>
-            <h2 class='section-title'>Partners</h2>
-            <div class='section-partner-content is-animated'>
-              <ul class='section-partner-list'>
-                <li><img loading='lazy' src='dummy/partner/1.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/2.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/3.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/4.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/5.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/6.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/7.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/8.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/9.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/10.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/11.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/12.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/13.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/14.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/18.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/15.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/16.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/17.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/19.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/20.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/21.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/22.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/23.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/24.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/25.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/26.png?v=3.2' alt=''></li>
-                <li><img loading='lazy' src='dummy/partner/27.png?v=3.2' alt=''></li>
-              </ul>
+      <div class='section section-partners'>
+        <div class='container section-container'>
+          <h2 class='section-title'>Partners</h2>
+          <div class='section-partners-content is-animated'>
+            <ul class='section-list-items'>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class='section section-footer'>
+        <div class='d-flex flex-column h-100'>
+          <div class='container section-container pb-0 text-center'>
+            <div class='row mt-4'>
+              <div class='col-lg-6'>
+                <h2 class='section-title'>Developed by</h2>
+                <div class='section-content'>
+                  <ul class='section-list-items'>
+                    <li><img loading='lazy' src='images/logo-molistudio.png' alt=''></li>
+                  </ul>
+                  <p class='text-white'>a member of Moli Network</p>
+                </div>
+              </div>
+              <div class='col-lg-6'>
+                <h2 class='section-title'>Audited by</h2>
+                <div class='section-content'>
+                  <ul class='section-list-items'>
+                    <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <footer class='footer mt-auto' id='footer'>
+          <footer class='footer mt-auto mb-4'>
             <div class='container'>
               <div class='row is-animated'>
                 <div class='col-12 col-lg-4'>
@@ -1322,8 +1292,9 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </div>
+
 <div class='nav-social'>
   <ul class='nav-social-list'>
     <li><a target='_blank' href='https://t.me/EtermonAnnouncement'><img loading='lazy' src='images/tele-icon.png'
@@ -1357,6 +1328,8 @@
 <!-- Optional JavaScript -->
 <!-- Core JavaScript -->
 <!--<script src="dist/core.min.js"></script>-->
+<script src='third_party/fullpage.js/dist/fullpage.min.js'></script>
+<!--<script src='third_party/fullpage.js/dist/fullpage.extensions.min.js'></script>-->
 <script src='third_party/jquery.min.js'></script>
 <script src='third_party/bootstrap.bundle.min.js'></script>
 <script src='third_party/modernizr.min.js'></script>
@@ -1368,8 +1341,8 @@
 
 <!-- JavaScript -->
 <!--<script src="dist/app.min.js"></script>-->
-<script src='js/common.js'></script>
-<script src='customs/script.js'></script>
+<script src='js/common.js?v=1.0.5'></script>
+<script src='customs/script.js?v=1.0.5'></script>
 
 <script>
   setTimeout(function() {
@@ -1423,49 +1396,6 @@
     alpha: true,
     showControls: false
   })
-
-  new spine.SpinePlayer('slider-1', {
-    jsonUrl: 'Anim/[N]Mouse/[N]Mouse.json',
-    atlasUrl: 'Anim/[N]Mouse/[N]Mouse.atlas',
-    animations: ['NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
-    alpha: true,
-    showControls: false
-  })
-
-  new spine.SpinePlayer('slider-2', {
-    jsonUrl: 'Anim/[R]Dragon/[R]Dragon.json?v=1',
-    atlasUrl: 'Anim/[R]Dragon/[R]Dragon.atlas.txt',
-    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
-    alpha: true,
-    showControls: false
-  })
-
-  new spine.SpinePlayer('slider-3', {
-    jsonUrl: 'Anim/[SR]Dragon/[SR]Dragon.json',
-    atlasUrl: 'Anim/[SR]Dragon/[SR]Dragon.atlas.txt',
-    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
-    alpha: true,
-    showControls: false
-  })
-</script>
-<script>
-  if (Modernizr.touch === true && window.innerWidth <= breakpointMobileSize) {
-    //alert('Touch Screen');
-  } else {
-    if (document.getElementById('fullpage')) {
-      document.getElementById('fullpage').addEventListener('lazybeforeunveil', function() {
-        var scriptLibrary = document.createElement('script')
-        scriptLibrary.onload = function() {
-          var scriptChart = document.createElement('script')
-          scriptChart.src = 'js/roadmap.js?v=3.2'
-          document.body.appendChild(scriptChart)
-        }
-
-        scriptLibrary.src = 'third_party/fullpage.js/dist/fullpage.js?v=3.2'
-        document.head.appendChild(scriptLibrary)
-      })
-    }
-  }
 </script>
 <!-- End JavaScript -->
 </body>

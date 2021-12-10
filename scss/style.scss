@@ -24,9 +24,9 @@
 //
 // =Third parties
 // --------------------------------------------------
+@import '../third_party/fullpage.js/dist/fullpage.min.css';
 @import '../third_party/spine-player/spine-player.css';
 @import '../third_party/animate.css/animate.min.css';
-@import '../third_party/fullpage.js/dist/fullpage.min.css';
 @import '../third_party/slick-carousel/slick/slick.css';
 @import '../third_party/slick-carousel/slick/slick-theme.css';
 //
@@ -59,7 +59,8 @@
 @import 'sections/section-tokenomics';
 @import 'sections/section-roadmap';
 @import 'sections/section-roadmap-update';
-@import 'sections/section-team';
-@import 'sections/section-investor';
-@import 'sections/section-partner';
+@import 'sections/section-core-team';
+@import 'sections/section-investors';
+@import 'sections/section-partners';
+@import 'sections/section-footer';
 @import 'pages/home';

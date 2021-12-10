@@ -11,7 +11,7 @@
 
   function slider() {
     $('.js-slider-items').slick({
-      infinite: false
+      // infinite: false
     })
   }
 
@@ -47,9 +47,40 @@
         }
       ]
     })
+
+  }
+
+  function fullPageInit() {
+    var myFullpage = new fullpage('#fullpage', {
+      licenseKey: '6B52CCE3-E8074605-B3EE5753-8E09C9E5',
+      responsiveSlides: true,
+      responsiveSlidesKey: '6B52CCE3-E8074605-B3EE5753-8E09C9E5',
+      anchors: [
+        'hero',
+        'video-trailer',
+        'about',
+        'gamesystem',
+        'playtotrade',
+        'tokenomics',
+        'tokenomics-2',
+        'roadmap',
+        'core-team',
+        'advisors',
+        'investors',
+        'partners',
+        'footer',
+      ],
+      navigation: true,
+      navigationPosition: 'right',
+      responsiveWidth: 991,
+      afterResponsive: function(isResponsive) {
+
+      }
+    })
   }
 
   function init() {
+    fullPageInit()
     slider()
     carousel()
   }
