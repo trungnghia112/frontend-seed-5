@@ -9,6 +9,7 @@
   margin: 0 auto;
   color: #ffffff;
   padding: 0 10px;
+
   .profile-box-img {
     background-image: url('../images/bg/avatar.png');
     background-repeat: no-repeat;
@@ -17,16 +18,39 @@
     padding: 45px;
     margin-left: -10px;
     margin-right: -10px;
-    img {
+    position: relative;
+
+    .profile-box-img-image {
       display: block;
       width: 100%;
       border-radius: 50%;
+    }
+
+    .profile-box-img-icons {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      a {
+        display: inline-block;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
     }
   }
 
   .h3 {
     font-size: 18px;
-    margin: -25px 0 15px 0;
+    margin: -15px 0 15px 0;
     // font-family: $font-family-base;
     text-transform: uppercase;
   }
@@ -37,6 +61,7 @@
     text-transform: uppercase;
     font-family: $font-family-base;
   }
+
   p {
     font-size: 14px;
   }
