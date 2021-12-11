@@ -200,6 +200,18 @@
               '.roadmap-update-timeline-list > li:nth-child(6) .is-animated',
             class: 'animate__animated animate__fadeInDown',
             delay: 1.2
+          },
+          {
+            selector:
+              '.roadmap-update-timeline-list > li:nth-child(7) .is-animated',
+            class: 'animate__animated animate__fadeInDown',
+            delay: 1.4
+          },
+          {
+            selector:
+              '.roadmap-update-timeline-list > li:nth-child(8) .is-animated',
+            class: 'animate__animated animate__fadeInDown',
+            delay: 1.6
           }
         ]
       },
