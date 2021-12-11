@@ -52,6 +52,7 @@ Content
 .section-partners {
   background-image: url('../images/bg/bg-partners.jpg?v=1.0.2');
 }
+
 .section-footer {
   background-image: url('../images/bg/bg-footer.jpg?v=1.0.2');
 }
@@ -237,24 +238,3 @@ Content
   }
 }
 
-.section-list-items {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-
-  > li {
-    display: inline-block;
-    width: 152px;
-    height: 152px;
-    background-image: url('../images/bg/partner.png');
-    background-size: cover;
-    padding: 10px 12px;
-    margin: 8px;
-
-    img {
-      width: 100%;
-      border-radius: 4px;
-    }
-  }
-}
