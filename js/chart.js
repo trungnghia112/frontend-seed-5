@@ -331,7 +331,7 @@
       '#362f9f',
       '#fef0ae',
       '#982e1d',
-      '#d88362',
+      '#d88362'
     ]
 
     /* var data = [
@@ -446,6 +446,102 @@
     }
 
     if (option && typeof option === 'object') {
+      if (window.screen.width < 768) {
+        option = {
+          color: colorPalette,
+          series: [
+            {
+              name: '',
+              type: 'pie',
+              radius: ['30%', '45%'],
+              data: data,
+              label: {
+                formatter: '{time|{c}%}',
+                rich: {
+                  time: {
+                    color: '#ffffff',
+                    fontFamily: "'Luckiest Guy', cursive",
+                    fontSize: 20
+                  }
+                }
+              }
+            }
+          ],
+          legend: {
+            orient: 'vertical',
+            left: 'left',
+            bottom: '-5%',
+            textStyle: {
+              color: '#ffffff'
+            },
+            formatter: function (name) {
+              const dataIndex = data.findIndex(v => v.name == name)
+              return `${data[dataIndex].value}% - ${data[dataIndex].name}`;
+            }
+          }
+        }
+      } else {
+        option = {
+          color: colorPalette,
+          tooltip: {
+            trigger: 'item',
+            formatter: function (e) {
+              return `
+                <strong>${e.name} ${e.value}%</strong> <br>
+                ${e.data.desc}
+              `
+            }
+          },
+          series: [
+            {
+              name: '',
+              type: 'pie',
+              radius: ['35%', '65%'],
+              label: {
+                alignTo: 'edge',
+                // alignTo: 'labelLine',
+                formatter: '{time|{c}%}\n{name|{b}}',
+                minMargin: 5,
+                edgeDistance: 10,
+                lineHeight: 35,
+                rich: {
+                  time: {
+                    color: '#ffffff',
+                    fontFamily: "'Luckiest Guy', cursive",
+                    fontSize: 30
+                  }
+                },
+                textStyle: {
+                  // color: '#ffb92d',
+                  color: '#ffffff',
+                  fontFamily: "'Arial', cursive",
+                  fontSize: 14
+                }
+              },
+              labelLine: {
+                lineStyle: {
+                  color: 'rgba(255, 255, 255, 1)'
+                },
+                length: 15,
+                length2: 0,
+                maxSurfaceAngle: 80
+              },
+              labelLayout: function (params) {
+                const isLeft = params.labelRect.x < myChart.getWidth() / 2
+                const points = params.labelLinePoints
+                // Update the end point.
+                points[2][0] = isLeft
+                  ? params.labelRect.x
+                  : params.labelRect.x + params.labelRect.width
+                return {
+                  labelLinePoints: points
+                }
+              },
+              data: data
+            }
+          ]
+        }
+      }
       myChart.setOption(option)
     }
 

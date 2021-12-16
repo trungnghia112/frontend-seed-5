@@ -10,7 +10,7 @@
     padding-bottom: 4px;
   }
   .tb-col-name {
-    width: 200px;
+    width: 230px;
   }
   .tb-col-token {
     width: 200px;
@@ -21,7 +21,7 @@
   .tb-col-lg-auto {
     min-width: 250px;
     @include media-breakpoint-up(lg) {
-      min-width: none;
+      min-width: auto;
     }
   }
 }

@@ -7,29 +7,28 @@
   <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
   <title>Etermon | Play to Trade - Trade to Earn</title>
 
-  <link rel='apple-touch-icon' sizes='180x180' href='images/favicons/apple-touch-icon.png?v=1.1.1'>
-  <link rel='icon' type='image/png' sizes='32x32' href='images/favicons/favicon-32x32.png?v=1.1.1'>
-  <link rel='icon' type='image/png' sizes='16x16' href='images/favicons/favicon-16x16.png?v=1.1.1'>
-  <link rel='manifest' href='images/favicons/site.webmanifest?v=1.1.1'>
-  <link rel='mask-icon' href='images/favicons/safari-pinned-tab.svg?v=1.1.1' color='#5bbad5'>
-  <link rel='shortcut icon' href='images/favicons/favicon.ico?v=1.1.1'>
+  <link rel='apple-touch-icon' sizes='180x180' href='images/favicons/apple-touch-icon.png?v=1.1.6'>
+  <link rel='icon' type='image/png' sizes='32x32' href='images/favicons/favicon-32x32.png?v=1.1.6'>
+  <link rel='icon' type='image/png' sizes='16x16' href='images/favicons/favicon-16x16.png?v=1.1.6'>
+  <link rel='manifest' href='images/favicons/site.webmanifest?v=1.1.6'>
+  <link rel='mask-icon' href='images/favicons/safari-pinned-tab.svg?v=1.1.6' color='#5bbad5'>
+  <link rel='shortcut icon' href='images/favicons/favicon.ico?v=1.1.6'>
   <meta name='msapplication-TileColor' content='#ffffff'>
-  <meta name='msapplication-config' content='images/favicons/browserconfig.xml?v=1.1.1'>
+  <meta name='msapplication-config' content='images/favicons/browserconfig.xml?v=1.1.6'>
   <meta name='theme-color' content='#ffffff'>
 
   <link rel='canonical' href='https://etermon.io'>
   <meta name='title' content='Etermon | Play to Trade - Trade to Earn'>
   <meta name='referrer' content='unsafe-url'>
-  <meta name='description'
-        content='Etermon is a NFT Game, a diverse monster world where you can PLAY, RELAX and EARN'>
+  <meta name='description' content='Etermon is an NFT Game, a diverse monster world where you can PLAY, RELAX and EARN'>
   <meta name='keywords'
-        content='etermon, etermon.io, etermon game, etermon etm, etm token, etermon tokenomic, etermon whitepaper, etermon nft, etermon pitch deck, etermon ido, etermon ico, etermon listing, game card battle, game turn based, game nft, metaverse, etermon vs bytedance'>
+    content='etermon, etermon.io, etermon game, etermon etm, etm token, etermon tokenomic, etermon whitepaper, etermon nft, etermon pitch deck, etermon ido, etermon ico, etermon listing, game card battle, game turn based, game nft, metaverse, etermon vs bytedance'>
 
   <meta property='og:locale' content='en_US' />
   <meta property='og:type' content='article' />
   <meta property='og:title' content='Etermon | Play to Trade - Trade to Earn'>
   <meta property='og:description'
-        content='Etermon is a NFT Game, a diverse monster world where you can PLAY, RELAX and EARN'>
+    content='Etermon is an NFT Game, a diverse monster world where you can PLAY, RELAX and EARN'>
   <meta property='og:url' content='https://etermon.io'>
   <meta property='og:site_name' content='etermon'>
   <meta property='article:publisher' content='etermon'>
@@ -43,166 +42,173 @@
   <meta name='twitter:url' content='https://etermon.io' />
   <meta name='twitter:title' content='Etermon | Play to Trade - Trade to Earn' />
   <meta name='twitter:description'
-        content='Etermon is a NFT Game, a diverse monster world where you can PLAY, RELAX and EARN' />
+    content='Etermon is an NFT Game, a diverse monster world where you can PLAY, RELAX and EARN' />
   <meta name='twitter:image' content='https://etermon.io/images/etermon-etm-tw.png' />
   <meta name='twitter:site' content='@etermonofficial' />
   <meta name='twitter:creator' content='@etermonofficial' />
   <!-- App CSS -->
   <style>
-      :root {
-          --theme-color: #007bff;
-          --bg-color: #ffffff;
+    :root {
+      --theme-color: #007bff;
+      --bg-color: #ffffff;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    .app-loading {
+      /* background: rgb(63, 94, 251);
+          background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
+      background: #a8ff78;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #78ffd6, #a8ff78);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      min-height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lds-roller {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .lds-roller img {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .lds-roller div {
+      animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      transform-origin: 40px 40px;
+    }
+
+    .lds-roller div:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+      margin: -4px 0 0 -4px;
+    }
+
+    .lds-roller div:nth-child(1) {
+      animation-delay: -0.036s;
+    }
+
+    .lds-roller div:nth-child(1):after {
+      top: 63px;
+      left: 63px;
+    }
+
+    .lds-roller div:nth-child(2) {
+      animation-delay: -0.072s;
+    }
+
+    .lds-roller div:nth-child(2):after {
+      top: 68px;
+      left: 56px;
+    }
+
+    .lds-roller div:nth-child(3) {
+      animation-delay: -0.108s;
+    }
+
+    .lds-roller div:nth-child(3):after {
+      top: 71px;
+      left: 48px;
+    }
+
+    .lds-roller div:nth-child(4) {
+      animation-delay: -0.144s;
+    }
+
+    .lds-roller div:nth-child(4):after {
+      top: 72px;
+      left: 40px;
+    }
+
+    .lds-roller div:nth-child(5) {
+      animation-delay: -0.18s;
+    }
+
+    .lds-roller div:nth-child(5):after {
+      top: 71px;
+      left: 32px;
+    }
+
+    .lds-roller div:nth-child(6) {
+      animation-delay: -0.216s;
+    }
+
+    .lds-roller div:nth-child(6):after {
+      top: 68px;
+      left: 24px;
+    }
+
+    .lds-roller div:nth-child(7) {
+      animation-delay: -0.252s;
+    }
+
+    .lds-roller div:nth-child(7):after {
+      top: 63px;
+      left: 17px;
+    }
+
+    .lds-roller div:nth-child(8) {
+      animation-delay: -0.288s;
+    }
+
+    .lds-roller div:nth-child(8):after {
+      top: 56px;
+      left: 12px;
+    }
+
+    @keyframes lds-roller {
+      0% {
+        transform: rotate(0deg);
       }
 
-      html {
-          box-sizing: border-box;
+      100% {
+        transform: rotate(360deg);
       }
-
-      *,
-      *::before,
-      *::after {
-          box-sizing: inherit;
-      }
-
-      .app-loading {
-          background: rgb(63, 94, 251);
-          background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 9999;
-          min-height: 100vh;
-          max-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-
-      .lds-roller {
-          display: inline-block;
-          position: relative;
-          width: 80px;
-          height: 80px;
-      }
-
-      .lds-roller img {
-          z-index: 1;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-      }
-
-      .lds-roller div {
-          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          transform-origin: 40px 40px;
-      }
-
-      .lds-roller div:after {
-          content: " ";
-          display: block;
-          position: absolute;
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: #fff;
-          margin: -4px 0 0 -4px;
-      }
-
-      .lds-roller div:nth-child(1) {
-          animation-delay: -0.036s;
-      }
-
-      .lds-roller div:nth-child(1):after {
-          top: 63px;
-          left: 63px;
-      }
-
-      .lds-roller div:nth-child(2) {
-          animation-delay: -0.072s;
-      }
-
-      .lds-roller div:nth-child(2):after {
-          top: 68px;
-          left: 56px;
-      }
-
-      .lds-roller div:nth-child(3) {
-          animation-delay: -0.108s;
-      }
-
-      .lds-roller div:nth-child(3):after {
-          top: 71px;
-          left: 48px;
-      }
-
-      .lds-roller div:nth-child(4) {
-          animation-delay: -0.144s;
-      }
-
-      .lds-roller div:nth-child(4):after {
-          top: 72px;
-          left: 40px;
-      }
-
-      .lds-roller div:nth-child(5) {
-          animation-delay: -0.18s;
-      }
-
-      .lds-roller div:nth-child(5):after {
-          top: 71px;
-          left: 32px;
-      }
-
-      .lds-roller div:nth-child(6) {
-          animation-delay: -0.216s;
-      }
-
-      .lds-roller div:nth-child(6):after {
-          top: 68px;
-          left: 24px;
-      }
-
-      .lds-roller div:nth-child(7) {
-          animation-delay: -0.252s;
-      }
-
-      .lds-roller div:nth-child(7):after {
-          top: 63px;
-          left: 17px;
-      }
-
-      .lds-roller div:nth-child(8) {
-          animation-delay: -0.288s;
-      }
-
-      .lds-roller div:nth-child(8):after {
-          top: 56px;
-          left: 12px;
-      }
-
-      @keyframes lds-roller {
-          0% {
-              transform: rotate(0deg);
-          }
-
-          100% {
-              transform: rotate(360deg);
-          }
-      }
+    }
   </style>
 
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
   <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'"
-        href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap'>
+    href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap'>
   <noscript>
     <link href='https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap' rel='stylesheet'>
   </noscript>
-  <link rel='stylesheet' href='dist/app.min.css?v=1.1.1'>
-  <!--  <link rel='stylesheet' href='css/style.css?v=1.1.1'>-->
-  <link rel='stylesheet' href='customs/style.css?v=1.1.1'>
+  <link rel='stylesheet' href='dist/app.min.css?v=1.1.6'>
+  <!--  <link rel='stylesheet' href='css/style.css?v=1.1.6'>-->
+  <link rel='stylesheet' href='customs/style.css?v=1.1.6'>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src='https://www.googletagmanager.com/gtag/js?id=UA-159081823-22'></script>
   <script>
@@ -219,114 +225,114 @@
 </head>
 
 <body>
-<div id='loading-wrapper' class='app-loading'>
-  <div class='lds-roller '>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <img src='images/logo_loading.png' alt='' class='loading-logo'>
+  <div id='loading-wrapper' class='app-loading'>
+    <div class='lds-roller '>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <img src='images/logo_loading.png' alt='' class='loading-logo'>
+    </div>
   </div>
-</div>
-<div class='wrapper'>
-  <header class='header' id='header'>
-    <!-- <div class='top-head text-center'>
+  <div class='wrapper'>
+    <header class='header' id='header'>
+      <!-- <div class='top-head text-center'>
       <div class='alert alert-warning alert-dismissible fade show' role='alert'>
         Official Etermon Token Contract (BEP-20): <span
           class='fw-bold text-primary-invert'>0x000000000000000000000000</span>
         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
       </div>
     </div> -->
-    <nav class='navbar navbar-expand-lg navbar-dark'>
-      <div class='container-fluid'>
-        <a class='navbar-brand' href='#'>
-          <img loading='lazy' src='images/logo.png?v=1.1.1' alt=''>
-        </a>
-        <button class='navbar-toggler' type='button' data-bs-toggle='collapse'
-                data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false'
-                aria-label='Toggle navigation'>
-          <span class='navbar-toggler-icon'></span>
-        </button>
-        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul class='navbar-nav me-auto'>
-            <li data-menuanchor='video-trailer' class='nav-item'>
-              <a class='nav-link' href='#video-trailer'>Video Trailer</a>
-            </li>
-            <li data-menuanchor='about' class='nav-item'>
-              <a class='nav-link' href='#about'>About</a>
-            </li>
-            <li data-menuanchor='gamesystem' class='nav-item'>
-              <a class='nav-link' href='#gamesystem'>Game system</a>
-            </li>
-          </ul>
-          <ul class='navbar-nav'>
-            <li data-menuanchor='roadmap' class='nav-item'>
-              <a class='nav-link' href='#roadmap'>Roadmap</a>
-            </li>
-            <li data-menuanchor='investors' class='nav-item'>
-              <a class='nav-link' href='#investors'>Investors & Partners</a>
-            </li>
-            <li class='nav-item mx-0 mx-lg-3'>
-              <a class='btn-button text-primary-invert' target='_blank'
-                 href='https://marketplace.etermon.io'>Marketplace</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class='main'>
-    <div id='fullpage'>
-      <div class='section section-hero'>
-        <div class='section-hero-container'>
-          <div class='firefly-wrap'>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
-            <div class='firefly'></div>
+      <nav class='navbar navbar-expand-lg navbar-dark'>
+        <div class='container-fluid'>
+          <a class='navbar-brand' href='#'>
+            <img loading='lazy' src='images/logo.png?v=1.1.6' alt=''>
+          </a>
+          <button class='navbar-toggler' type='button' data-bs-toggle='collapse'
+            data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false'
+            aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+          </button>
+          <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav me-auto'>
+              <li data-menuanchor='video-trailer' class='nav-item'>
+                <a class='nav-link' href='#video-trailer'>Video Trailer</a>
+              </li>
+              <li data-menuanchor='about' class='nav-item'>
+                <a class='nav-link' href='#about'>About</a>
+              </li>
+              <li data-menuanchor='gamesystem' class='nav-item'>
+                <a class='nav-link' href='#gamesystem'>Game system</a>
+              </li>
+            </ul>
+            <ul class='navbar-nav'>
+              <li data-menuanchor='roadmap' class='nav-item'>
+                <a class='nav-link' href='#roadmap'>Roadmap</a>
+              </li>
+              <li data-menuanchor='investors' class='nav-item'>
+                <a class='nav-link' href='#investors'>Investors & Partners</a>
+              </li>
+              <li class='nav-item mx-0 mx-lg-3'>
+                <a class='btn-button text-primary-invert' target='_blank'
+                  href='https://marketplace.etermon.io'>Marketplace</a>
+              </li>
+            </ul>
           </div>
-          <div class='section-hero-content'>
-            <div class='hero-content-cooperate is-animated'>
-              <div class='hero-content-logo'>
-                <img loading='lazy' src='images/partners/logo.png?v=1.1.1' alt=''>
-              </div>
-              <div class='hero-content-text'>X</div>
-              <div class='hero-content-logo'>
-                <img loading='lazy' src='images/partners/byte-dance.png?v=1.1.1' alt=''>
-              </div>
+        </div>
+      </nav>
+    </header>
+    <div class='main'>
+      <div id='fullpage'>
+        <div class='section section-hero'>
+          <div class='section-hero-container'>
+            <div class='firefly-wrap'>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
+              <div class='firefly'></div>
             </div>
-            <div class='hero-content-buttons'>
-              <div class='container-fluid'>
-                <div class='row'>
-                  <div class='col-4 button-col-android is-animated text-center'>
-                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                       data-bs-target='#modalComingSoon'>
-                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
-                           viewBox='0 0 299.679 299.679' xml:space='preserve'>
-                            <path id='XMLID_221_'
-                                  d='M181.122,299.679c10.02,0,18.758-8.738,18.758-18.758v-43.808h12.525c7.516,0,12.525-5.011,12.525-12.525
+            <div class='section-hero-content'>
+              <div class='hero-content-cooperate is-animated'>
+                <div class='hero-content-logo'>
+                  <img loading='lazy' src='images/partners/logo.png?v=1.1.6' alt=''>
+                </div>
+                <!--<div class='hero-content-text'>X</div>
+              <div class='hero-content-logo'>
+                <img loading='lazy' src='images/partners/byte-dance.png?v=1.1.6' alt=''>
+              </div>-->
+              </div>
+              <div class='hero-content-buttons'>
+                <div class='container-fluid'>
+                  <div class='row'>
+                    <div class='col-4 button-col-android is-animated text-center'>
+                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                        data-bs-target='#modalComingSoon'>
+                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
+                          viewBox='0 0 299.679 299.679' xml:space='preserve'>
+                          <path id='XMLID_221_'
+                            d='M181.122,299.679c10.02,0,18.758-8.738,18.758-18.758v-43.808h12.525c7.516,0,12.525-5.011,12.525-12.525
                       V99.466H74.749v125.123c0,7.515,5.01,12.525,12.525,12.525H99.8v43.808c0,10.02,8.736,18.758,18.758,18.758
                       c10.019,0,18.756-8.738,18.756-18.758v-43.808h25.051v43.808C162.364,290.941,171.102,299.679,181.122,299.679z' />
-                        <path id='XMLID_222_' d='M256.214,224.589c10.02,0,18.756-8.737,18.756-18.758v-87.615c0-9.967-8.736-18.75-18.756-18.75
+                          <path id='XMLID_222_' d='M256.214,224.589c10.02,0,18.756-8.737,18.756-18.758v-87.615c0-9.967-8.736-18.75-18.756-18.75
                       c-10.021,0-18.758,8.783-18.758,18.75v87.615C237.456,215.851,246.192,224.589,256.214,224.589z' />
-                        <path id='XMLID_223_' d='M43.466,224.589c10.021,0,18.758-8.737,18.758-18.758v-87.615c0-9.967-8.736-18.75-18.758-18.75
+                          <path id='XMLID_223_' d='M43.466,224.589c10.021,0,18.758-8.737,18.758-18.758v-87.615c0-9.967-8.736-18.75-18.758-18.75
                       c-10.02,0-18.756,8.783-18.756,18.75v87.615C24.71,215.851,33.446,224.589,43.466,224.589z' />
-                        <path id='XMLID_224_' d='M209.899,1.89c-2.504-2.52-6.232-2.52-8.736,0l-16.799,16.743l-0.775,0.774
+                          <path id='XMLID_224_' d='M209.899,1.89c-2.504-2.52-6.232-2.52-8.736,0l-16.799,16.743l-0.775,0.774
                       c-9.961-4.988-21.129-7.479-33.566-7.503c-0.061,0-0.121-0.002-0.182-0.002h-0.002c-0.063,0-0.121,0.002-0.184,0.002
                       c-12.436,0.024-23.604,2.515-33.564,7.503l-0.777-0.774L98.516,1.89c-2.506-2.52-6.232-2.52-8.736,0
                       c-2.506,2.506-2.506,6.225,0,8.729l16.25,16.253c-5.236,3.496-9.984,7.774-14.113,12.667C82.032,51.256,75.727,66.505,74.86,83.027
@@ -336,17 +342,17 @@
                       c0-5.182,4.201-9.383,9.383-9.383c5.182,0,9.383,4.201,9.383,9.383C127.917,60.862,123.716,65.063,118.534,65.063z M181.145,65.063
                       c-5.182,0-9.383-4.201-9.383-9.383c0-5.182,4.201-9.383,9.383-9.383c5.182,0,9.383,4.201,9.383,9.383
                       C190.528,60.862,186.327,65.063,181.145,65.063z' />
-                          </svg>
-                      <span class='d-none d-lg-inline-block ms-1'>ANDROID</span>
-                    </a>
-                    <p>Coming soon...</p>
-                  </div>
-                  <div class='col-4 button-col-ios is-animated text-center'>
-                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                       data-bs-target='#modalComingSoon'>
-                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
-                           xml:space='preserve'>
-                            <path id='XMLID_229_' d='M40.738,112.119c-25.785,44.745-9.393,112.648,19.121,153.82C74.092,286.523,88.502,305,108.239,305
+                        </svg>
+                        <span class='d-none d-lg-inline-block ms-1'>ANDROID</span>
+                      </a>
+                      <p>Coming soon...</p>
+                    </div>
+                    <div class='col-4 button-col-ios is-animated text-center'>
+                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                        data-bs-target='#modalComingSoon'>
+                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
+                          xml:space='preserve'>
+                          <path id='XMLID_229_' d='M40.738,112.119c-25.785,44.745-9.393,112.648,19.121,153.82C74.092,286.523,88.502,305,108.239,305
                       c0.372,0,0.745-0.007,1.127-0.022c9.273-0.37,15.974-3.225,22.453-5.984c7.274-3.1,14.797-6.305,26.597-6.305
                       c11.226,0,18.39,3.101,25.318,6.099c6.828,2.954,13.861,6.01,24.253,5.815c22.232-0.414,35.882-20.352,47.925-37.941
                       c12.567-18.365,18.871-36.196,20.998-43.01l0.086-0.271c0.405-1.211-0.167-2.533-1.328-3.066c-0.032-0.015-0.15-0.064-0.183-0.078
@@ -355,277 +361,278 @@
                       c-1.613-0.161-3.278-0.242-4.95-0.242c-13.056,0-25.563,4.931-35.611,8.893c-6.936,2.735-12.927,5.097-17.059,5.097
                       c-4.643,0-10.668-2.391-17.645-5.159c-9.33-3.703-19.905-7.899-31.1-7.899c-0.267,0-0.53,0.003-0.789,0.008
                       C78.894,73.643,54.298,88.535,40.738,112.119z' />
-                        <path id='XMLID_230_' d='M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
+                          <path id='XMLID_230_' d='M212.101,0.002c-15.763,0.642-34.672,10.345-45.974,23.583c-9.605,11.127-18.988,29.679-16.516,48.379
                       c0.155,1.17,1.107,2.073,2.284,2.164c1.064,0.083,2.15,0.125,3.232,0.126c15.413,0,32.04-8.527,43.395-22.257
                       c11.951-14.498,17.994-33.104,16.166-49.77C214.544,0.921,213.395-0.049,212.101,0.002z' />
-                          </svg>
-                      <span class='d-none d-lg-inline-block ms-1'>IOS</span>
-                    </a>
-                    <p>Coming soon...</p>
-                  </div>
-                  <div class='col-4 button-col-web is-animated text-center'>
-                    <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
-                       data-bs-target='#modalComingSoon'>
-                      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
-                           xml:space='preserve'>
-                            <path id='XMLID_17_' d='M95.506,152.511c0,31.426,25.567,56.991,56.994,56.991c31.425,0,56.99-25.566,56.99-56.991
+                        </svg>
+                        <span class='d-none d-lg-inline-block ms-1'>IOS</span>
+                      </a>
+                      <p>Coming soon...</p>
+                    </div>
+                    <div class='col-4 button-col-web is-animated text-center'>
+                      <a class='btn-button btn-icon' href='javascript:;' data-bs-toggle='modal'
+                        data-bs-target='#modalComingSoon'>
+                        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 305 305'
+                          xml:space='preserve'>
+                          <path id='XMLID_17_' d='M95.506,152.511c0,31.426,25.567,56.991,56.994,56.991c31.425,0,56.99-25.566,56.99-56.991
                       c0-31.426-25.565-56.993-56.99-56.993C121.073,95.518,95.506,121.085,95.506,152.511z' />
-                        <path id='XMLID_18_' d='M283.733,77.281c0.444-0.781,0.436-1.74-0.023-2.513c-13.275-22.358-32.167-41.086-54.633-54.159
+                          <path id='XMLID_18_' d='M283.733,77.281c0.444-0.781,0.436-1.74-0.023-2.513c-13.275-22.358-32.167-41.086-54.633-54.159
                       C205.922,7.134,179.441,0.012,152.5,0.012c-46.625,0-90.077,20.924-119.215,57.407c-0.643,0.804-0.727,1.919-0.212,2.81
                       l42.93,74.355c0.45,0.78,1.28,1.25,2.164,1.25c0.112,0,0.226-0.008,0.339-0.023c1.006-0.137,1.829-0.869,2.083-1.852
                       c8.465-32.799,38.036-55.706,71.911-55.706c2.102,0,4.273,0.096,6.455,0.282c0.071,0.007,0.143,0.01,0.214,0.01H281.56
                       C282.459,78.545,283.289,78.063,283.733,77.281z' />
-                        <path id='XMLID_19_' d='M175.035,224.936c-0.621-0.803-1.663-1.148-2.646-0.876c-6.457,1.798-13.148,2.709-19.889,2.709
+                          <path id='XMLID_19_' d='M175.035,224.936c-0.621-0.803-1.663-1.148-2.646-0.876c-6.457,1.798-13.148,2.709-19.889,2.709
                       c-28.641,0-55.038-16.798-67.251-42.794c-0.03-0.064-0.063-0.126-0.098-0.188L23.911,77.719c-0.446-0.775-1.272-1.25-2.165-1.25
                       c-0.004,0-0.009,0-0.013,0c-0.898,0.005-1.725,0.49-2.165,1.272C6.767,100.456,0,126.311,0,152.511
                       c0,36.755,13.26,72.258,37.337,99.969c23.838,27.435,56.656,45.49,92.411,50.84c0.124,0.019,0.248,0.027,0.371,0.027
                       c0.883,0,1.713-0.47,2.164-1.25l42.941-74.378C175.732,226.839,175.657,225.739,175.035,224.936z' />
-                        <path id='XMLID_20_' d='M292.175,95.226h-85.974c-1.016,0-1.931,0.615-2.314,1.555c-0.384,0.94-0.161,2.02,0.564,2.73
+                          <path id='XMLID_20_' d='M292.175,95.226h-85.974c-1.016,0-1.931,0.615-2.314,1.555c-0.384,0.94-0.161,2.02,0.564,2.73
                       c14.385,14.102,22.307,32.924,22.307,53c0,15.198-4.586,29.824-13.263,42.298c-0.04,0.058-0.077,0.117-0.112,0.178l-61.346,106.252
                       c-0.449,0.778-0.446,1.737,0.007,2.513c0.449,0.767,1.271,1.237,2.158,1.237c0.009,0,0.019,0,0.028,0
                       c40.37-0.45,78.253-16.511,106.669-45.222C289.338,231.032,305,192.941,305,152.511c0-19.217-3.532-37.956-10.498-55.698
                       C294.126,95.855,293.203,95.226,292.175,95.226z' />
-                          </svg>
-                      <span class='d-none d-lg-inline-block ms-1'>WEB</span>
-                    </a>
-                    <p>Coming soon...</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id='dragon' class='video-container-item video-container-item-1'>
-          </div>
-          <div id='sdragon' class='video-container-item video-container-item-2'>
-          </div>
-        </div>
-      </div>
-      <div class='section section-video-trailer'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Video Trailer</h2>
-          <div class='section-video-trailer-content is-animated'>
-            <div class='ratio ratio-16x9'>
-              <iframe loading='lazy' class='lazyload' src='https://www.youtube.com/embed/8YxNUjIGv2A?rel=0'
-                      title='YouTube video' allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='section section-about'>
-        <div class='container section-container'>
-          <h2 class='section-title'>About Etermon</h2>
-          <p class='section-title-sub'>
-            In 3033, humanity has a tremendous development. Human begins looking for a new civilized outside the
-            earth. <br>
-            With that growth, we discover many other societies. Many different kinds live on other various planets. On
-            a trip around the universe, one astronaut's spaceship got broken. He has no choice except to land on a
-            strange asteroid. <br>
-            On this planet, he finds out new species. They are monsters that have the power of different elements.
-            They are Etermon. <br>
-            To go back to the Earth, the astronaut needs to use the space gate. It is ruled by the master of this
-            planet. The explorer has no alternative. He has to catch and train the Etermon to fight against the
-            master. Then, he can have a chance to go home.
-          </p>
-          <div class='section-content'>
-            <div class='row row-about-content'>
-              <div class='col-lg-4 is-animated'>
-                <div class='about-content-box'>
-                  <div class='about-content-image'>
-                    <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.1' alt=''>
-                    <img loading='lazy' class='about-content-img-over' src='images/about-item-1.png?v=1.1.1' alt=''>
-                  </div>
-                  <h3 class='h3'>PLAYGAME</h3>
-                  <p>The diverse monster hierarchies, matching systems, and arraying based on the characteristics of
-                    each monster will enhance and bring the strategy of the game to the forefront.
-                  </p>
-                </div>
-              </div>
-              <div class='col-lg-4 is-animated'>
-                <div class='about-content-box'>
-                  <div class='about-content-image'>
-                    <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.1' alt=''>
-                    <img loading='lazy' class='about-content-img-over' src='images/about-item-2.png?v=1.1.1' alt=''>
-                  </div>
-                  <h3 class='h3'>PLAY2EARN</h3>
-                  <p>
-                    Most games in the Play-to-Earn system will have unstable prices when game items are inflated.
-                    Unlike them, we have Burn mechanism to keep it stable and valuable.
-                  </p>
-                </div>
-              </div>
-              <div class='col-lg-4 is-animated'>
-                <div class='about-content-box'>
-                  <div class='about-content-image'>
-                    <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.1' alt=''>
-                    <img loading='lazy' class='about-content-img-over' src='images/about-item-3.png?v=1.1.1' alt=''>
-                    <!-- <img loading=lazy class='about-content-image-bg' src='images/about-bg-item.png?v=1.1.1' alt=''> -->
-                  </div>
-                  <h3 class='h3'>GAMEFI</h3>
-                  <p>
-                    In addition, the other feature of the team is collecting opinions as well as references from many
-                    different products on the market to find more selling points for the product.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='section section-gamesystem'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Gamesystem</h2>
-          <div class='section-content'>
-            <div class='row align-items-center'>
-              <div class='col-lg-6 is-animated'>
-                <div class='gamesystem-content-box'>
-                  <div class='gamesystem-content-header'>
-                    <h3 class='h3'>Etermon</h3>
-                  </div>
-                  <div class='gamesystem-content-body'>
-                    <ul class='list-styled'>
-                      <li>Style: Card Battle 2D, Turn Based</li>
-                      <li>Slogan: Play to Trade - Trade to Earn</li>
-                      <li>Story: In 3033, humanity has a tremendous development. Human begins looking for a new
-                        civilized outside the earth.
-                        <br>
-                        With that growth, we discover many other societies. Many different kinds live on other various
-                        planets. On a trip around the universe, one astronaut's spaceship got broken. He has no choice
-                        except to land on a strange asteroid.
-                        <br>
-                        On this planet, he finds out new species. They are monsters that have the power of different
-                        elements. They are Etermon.
-                        <br>
-                        To go back to the Earth, the astronaut needs to use the space gate. It is ruled by the master
-                        of this planet. The explorer has no alternative. He has to catch and train the Etermon to
-                        fight against the master. Then, he can have a chance to go home.
-                      </li>
-                    </ul>
-                    <div class='row'>
-                      <div class='col-lg-6'>
-                        <ul class='list-styled'>
-                          <li>About 6 Monsters: including 4 ranks N, R, SR and SSR.</li>
-                          <li>Evolutionary mechanism: <br>
-                            <div class='row'>
-                              <div class='col-6'>N -> R</div>
-                              <div class='col-6'>SR -> SSR</div>
-                              <div class='col-6'>R -> SR</div>
-                              <div class='col-6'>SSR -> SSR+</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class='col-lg-6'>
-                        <h4 class='h4'>3 Basic Elements</h4>
-                        <ul class='gamesystem-elements-list'>
-                          <li>
-                            <div><img loading='lazy' src='images/gs-fire.png?v=1.1.1' alt=''></div>
-                            <span>Fire</span>
-                          </li>
-                          <li>
-                            <div><img loading='lazy' src='images/gs-water.png?v=1.1.1' alt=''></div>
-                            <span>Water</span>
-                          </li>
-                          <li>
-                            <div><img loading='lazy' src='images/gs-electric.png?v=1.1.1' alt=''></div>
-                            <span>Electric</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class='col-lg-6 is-animated'>
-                <div class='slider-items gamesystem-slider js-slider-items'>
-                  <div class='slider-item'>
-                    <div class='gamesystem-slide-item'>
-                      <div class='gamesystem-slide-item-img'>
-                        <img src='images/slide-1.png' alt=''>
-                        <!--<img src='images/slide-item-size.png' alt=''>
-                        <div class='gamesystem-1' id='slider-1'></div>-->
-                      </div>
-                      <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=1.1.1'
-                           alt=''>-->
-                    </div>
-                  </div>
-                  <div class='slider-item'>
-                    <div class='gamesystem-slide-item'>
-                      <div class='gamesystem-slide-item-img'>
-                        <img src='images/slide-2.png' alt=''>
-                        <!--<img src='images/slide-item-size.png' alt=''>
-                        <div class='gamesystem-2' id='slider-2'></div>-->
-                      </div>
-                      <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=1.1.1'
-                           alt=''>-->
+                        </svg>
+                        <span class='d-none d-lg-inline-block ms-1'>WEB</span>
+                      </a>
+                      <p>Coming soon...</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class='section section-playtotrade'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Play to Trade - Trade to Earn</h2>
-          <div class='section-content'>
-            <div class='section-playtotrade-img is-animated'>
-              <img loading='lazy' class='w-100' src='images/playtotrade-item.png?v=1.1.1' alt=''>
+            <div id='dragon' class='video-container-item video-container-item-1'>
             </div>
-            <ul class='section-playtotrade-list'>
-              <li>Daily Quest, Weekly Quest, Achievement</li>
-              <li>Campaign Stage</li>
-              <li>Guild Boss</li>
-              <li>Endless Tower</li>
-              <li>Season</li>
-              <li>World Boss</li>
-              <li>War Guild</li>
-            </ul>
+            <div id='sdragon' class='video-container-item video-container-item-2'>
+            </div>
           </div>
         </div>
-      </div>
-      <div class='section section-tokenomics'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Tokenomics</h2>
-          <div class='section-content'>
-            <div class='row'>
-              <div class='col-lg-8 is-animated'>
-                <div class='tokenomics-content-chart lazyload' id='js-token-chart'></div>
+        <div class='section section-video-trailer'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Video Trailer</h2>
+            <div class='section-video-trailer-content is-animated'>
+              <div class='ratio ratio-16x9'>
+                <iframe loading='lazy' class='lazyload' src='https://www.youtube.com/embed/8YxNUjIGv2A?rel=0'
+                  title='YouTube video' allowfullscreen></iframe>
               </div>
-              <div class='col-lg-4 is-animated'>
-                <div class='tokenomics-content-table'>
-                  <div class='card-styled tokenomics-card'>
-                    <div class='card-styled-header'>
+            </div>
+          </div>
+        </div>
+        <div class='section section-about'>
+          <div class='container section-container'>
+            <h2 class='section-title'>About Etermon</h2>
+            <p class='section-title-sub'>
+              In 3033, humanity has a tremendous development. Humans begin looking for a new civilisation outside the
+              earth. <br>
+              With that growth, we discover many other societies. Many different kinds live on other various planets. On
+              a trip around the universe, one astronaut's spaceship got broken. He has no choice except to land on a
+              strange asteroid. <br>
+              On this planet, he finds out new species. They are monsters that have the power of different elements.
+              They are Etermon. <br>
+              To go back to the Earth, the astronaut needs to use the space gate. It is ruled by the master of this
+              planet. The explorer has no alternative. He has to catch and train the Etermon to fight against the
+              master. Then, he can have a chance to go home.
+            </p>
+            <div class='section-content'>
+              <div class='row row-about-content'>
+                <div class='col-lg-4 is-animated'>
+                  <div class='about-content-box'>
+                    <div class='about-content-image'>
+                      <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.6' alt=''>
+                      <img loading='lazy' class='about-content-img-over' src='images/about-item-1.png?v=1.1.6' alt=''>
+                    </div>
+                    <h3 class='h3'>PLAYGAME</h3>
+                    <p>The diverse monster hierarchies, matching systems, and arraying based on the characteristics of
+                      each monster will enhance and bring the strategy of the game to the forefront.
+                    </p>
+                  </div>
+                </div>
+                <div class='col-lg-4 is-animated'>
+                  <div class='about-content-box'>
+                    <div class='about-content-image'>
+                      <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.6' alt=''>
+                      <img loading='lazy' class='about-content-img-over' src='images/about-item-2.png?v=1.1.6' alt=''>
+                    </div>
+                    <h3 class='h3'>PLAY2EARN</h3>
+                    <p>
+                      Most games in the Play-to-Earn system will have unstable prices when game items are inflated.
+                      Unlike them, we have Burn mechanism to keep it stable and valuable.
+                    </p>
+                  </div>
+                </div>
+                <div class='col-lg-4 is-animated'>
+                  <div class='about-content-box'>
+                    <div class='about-content-image'>
+                      <img loading='lazy' class='about-content-img' src='images/bg/wheel-item.png?v=1.1.6' alt=''>
+                      <img loading='lazy' class='about-content-img-over' src='images/about-item-3.png?v=1.1.6' alt=''>
+                      <!-- <img loading=lazy class='about-content-image-bg' src='images/about-bg-item.png?v=1.1.6' alt=''> -->
+                    </div>
+                    <h3 class='h3'>GAMEFI</h3>
+                    <p>
+                      In addition, the other feature of the team is collecting opinions as well as references from many
+                      different products on the market to find more selling points for the product.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='section section-gamesystem'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Gamesystem</h2>
+            <div class='section-content'>
+              <div class='row align-items-center'>
+                <div class='col-lg-6 is-animated'>
+                  <div class='gamesystem-content-box'>
+                    <div class='gamesystem-content-header'>
                       <h3 class='h3'>Etermon</h3>
                     </div>
-                    <div class='card-styled-body'>
-                      <div class='tokenomics-table-row'>
-                        <div class='tokenomics-table-th'>Name</div>
-                        <div class='tokenomics-table-td'>Etermon</div>
+                    <div class='gamesystem-content-body'>
+                      <ul class='list-styled'>
+                        <li>Style: Card Battle 2D, Turn Based</li>
+                        <li>Slogan: Play to Trade - Trade to Earn</li>
+                        <li>Story: In 3033, humanity has a tremendous development. Human begins looking for a new
+                          civilized outside the earth.
+                          <br>
+                          With that growth, we discover many other societies. Many different kinds live on other various
+                          planets. On a trip around the universe, one astronaut's spaceship got broken. He has no choice
+                          except to land on a strange asteroid.
+                          <br>
+                          On this planet, he finds out new species. They are monsters that have the power of different
+                          elements. They are Etermon.
+                          <br>
+                          To go back to the Earth, the astronaut needs to use the space gate. It is ruled by the master
+                          of this planet. The explorer has no alternative. He has to catch and train the Etermon to
+                          fight against the master. Then, he can have a chance to go home.
+                        </li>
+                      </ul>
+                      <div class='row'>
+                        <div class='col-lg-6'>
+                          <ul class='list-styled'>
+                            <li>About 6 Monsters: including 4 ranks N, R, SR and SSR.</li>
+                            <li>Evolutionary mechanism: <br>
+                              <div class='row'>
+                                <div class='col-6'>N -> R</div>
+                                <div class='col-6'>SR -> SSR</div>
+                                <div class='col-6'>R -> SR</div>
+                                <div class='col-6'>SSR -> SSR+</div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class='col-lg-6'>
+                          <h4 class='h4'>3 Basic Elements</h4>
+                          <ul class='gamesystem-elements-list'>
+                            <li>
+                              <div><img loading='lazy' src='images/gs-fire.png?v=1.1.6' alt=''></div>
+                              <span>Fire</span>
+                            </li>
+                            <li>
+                              <div><img loading='lazy' src='images/gs-water.png?v=1.1.6' alt=''></div>
+                              <span>Water</span>
+                            </li>
+                            <li>
+                              <div><img loading='lazy' src='images/gs-electric.png?v=1.1.6' alt=''></div>
+                              <span>Electric</span>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class='tokenomics-table-row'>
-                        <div class='tokenomics-table-th'>Symbol</div>
-                        <div class='tokenomics-table-td'>ETM</div>
+                    </div>
+                  </div>
+                </div>
+                <div class='col-lg-6 is-animated'>
+                  <div class='slider-items gamesystem-slider js-slider-items'>
+                    <div class='slider-item'>
+                      <div class='gamesystem-slide-item'>
+                        <div class='gamesystem-slide-item-img'>
+                          <img src='images/slide-1.png' alt=''>
+                          <!--<img src='images/slide-item-size.png' alt=''>
+                        <div class='gamesystem-1' id='slider-1'></div>-->
+                        </div>
+                        <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=1.1.6'
+                           alt=''>-->
                       </div>
-                      <div class='tokenomics-table-row'>
-                        <div class='tokenomics-table-th'>Blockchain</div>
-                        <div class='tokenomics-table-td'>BSC</div>
+                    </div>
+                    <div class='slider-item'>
+                      <div class='gamesystem-slide-item'>
+                        <div class='gamesystem-slide-item-img'>
+                          <img src='images/slide-2.png' alt=''>
+                          <!--<img src='images/slide-item-size.png' alt=''>
+                        <div class='gamesystem-2' id='slider-2'></div>-->
+                        </div>
+                        <!--<img loading='lazy' class='gamesystem-slide-item-footage' src='images/bg/game-item.png?v=1.1.6'
+                           alt=''>-->
                       </div>
-                      <div class='tokenomics-table-row active'>
-                        <div class='tokenomics-table-th'>Total Token Supply</div>
-                        <div class='tokenomics-table-td'>1.000.000.000</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='section section-playtotrade'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Play to Trade - Trade to Earn</h2>
+            <div class='section-content'>
+              <div class='section-playtotrade-img is-animated'>
+                <img loading='lazy' class='w-100' src='images/playtotrade-item.png?v=1.1.6' alt=''>
+              </div>
+              <ul class='section-playtotrade-list'>
+                <li>Daily Quest, Weekly Quest, Achievement</li>
+                <li>Campaign Stage</li>
+                <li>Guild Boss</li>
+                <li>Endless Tower</li>
+                <li>Season</li>
+                <li>World Boss</li>
+                <li>War Guild</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='section section-tokenomics'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Tokenomics</h2>
+            <div class='section-content'>
+              <div class='row'>
+                <div class='col-lg-8 is-animated mb-4 mb-lg-0'>
+                  <div class='tokenomics-content-chart lazyload' id='js-token-chart'></div>
+                </div>
+                <div class='col-lg-4 is-animated'>
+                  <div class='tokenomics-content-table'>
+                    <div class='card-styled tokenomics-card'>
+                      <div class='card-styled-header'>
+                        <h3 class='h3'>Etermon</h3>
                       </div>
-                      <div class='tokenomics-table-row'>
-                        <div class='tokenomics-table-th'>Initial Market Cap</div>
-                        <div class='tokenomics-table-td'>$450.000</div>
-                      </div>
-                      <div class='tokenomics-table-row'>
-                        <div class='tokenomics-table-th'>Initial Circulating Supply</div>
-                        <div class='tokenomics-table-td'>155.000.000</div>
-                      </div>
-                      <div class='tokenomics-table-row'>
+                      <div class='card-styled-body'>
+                        <div class='tokenomics-table-row'>
+                          <div class='tokenomics-table-th'>Name</div>
+                          <div class='tokenomics-table-td'>Etermon</div>
+                        </div>
+                        <div class='tokenomics-table-row'>
+                          <div class='tokenomics-table-th'>Symbol</div>
+                          <div class='tokenomics-table-td'>ETM</div>
+                        </div>
+                        <div class='tokenomics-table-row'>
+                          <div class='tokenomics-table-th'>Blockchain</div>
+                          <div class='tokenomics-table-td'>BSC</div>
+                        </div>
+                        <div class='tokenomics-table-row active'>
+                          <div class='tokenomics-table-th'>Total Token Supply</div>
+                          <div class='tokenomics-table-td'>1.000.000.000</div>
+                        </div>
+                        <div class='tokenomics-table-row'>
+                          <div class='tokenomics-table-th'>Initial Market Cap</div>
+                          <div class='tokenomics-table-td'>$450.000</div>
+                        </div>
+                        <div class='tokenomics-table-row'>
+                          <div class='tokenomics-table-th'>Initial Circulating Supply</div>
+                          <div class='tokenomics-table-td'>155.000.000</div>
+                        </div>
+                        <!--<div class='tokenomics-table-row'>
                         <div class='tokenomics-table-th'>Total Diluted Market Cap</div>
                         <div class='tokenomics-table-td'>15.000.000</div>
+                      </div>-->
                       </div>
                     </div>
                   </div>
@@ -634,947 +641,942 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class='section section-tokenomics-2'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Tokenomics</h2>
-          <div class='section-content'>
-            <div class='table-responsive table-tokenomics-top is-animated' id='tokenomics-2-1'>
-              <table class='table table-styled'>
-                <thead>
-                <tr>
-                  <th class='tb-col-name'>TOKEN SALE</th>
-                  <th class='text-end tb-col-token'>TOKEN ALLOCATION</th>
-                  <th class='text-center tb-col-percent'>PRICE</th>
-                  <th class='text-center tb-col-percent'>PERCENTAGE</th>
-                  <th class='tb-col-lg-auto'>TOKEN RELEASE SCHEDULE</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Seed</th>
-                  <td class='text-end'>40.000.000</td>
-                  <td class='text-center'>$0.010</td>
-                  <td class='text-center'>20%</td>
-                  <td>8.5% at TGE and linear distribution over 18 months</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Private</th>
-                  <td class='text-end'>145.000.000</td>
-                  <td class='text-center'>$0.015</td>
-                  <td class='text-center'>72.5%</td>
-                  <td>7% at TGE and linear distribution over 18 months</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Public IDO</th>
-                  <td class='text-end'>15.000.000</td>
-                  <td class='text-center'>$0.020</td>
-                  <td class='text-center'>7.5%</td>
-                  <td>25% at TGE and 15% each month thereafter</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Total</th>
-                  <th scope='row' class='text-end'>200.000.000</th>
-                  <th scope='row' class='text-end'></th>
-                  <th scope='row' class='text-center'>100%</th>
-                  <th scope='row'></th>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class='table-responsive table-tokenomics-bottom is-animated' id='tokenomics-2-2'>
-              <table class='table table-styled'>
-                <thead>
-                <tr>
-                  <th colspan='4'>TOKEN ALLOCATION</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Token Sale</th>
-                  <td class='text-end tb-col-token'>200.000.000</td>
-                  <td class='text-center tb-col-percent'>20%</td>
-                  <td class='tb-col-lg-auto'>Unlocked as per token release schedule</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Team</th>
-                  <td class='text-end tb-col-token'>190.000.000</td>
-                  <td class='text-center tb-col-percent'>19%</td>
-                  <td class='tb-col-lg-auto'>Locked 1 year, then vested over a period of one year</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Advisors</th>
-                  <td class='text-end tb-col-token'>40.000.000</td>
-                  <td class='text-center tb-col-percent'>4%</td>
-                  <td class='tb-col-lg-auto'>Locked 1 year, then vested linearly over 6 months</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Ecosystem/Staking/Airdrop</th>
-                  <td class='text-end tb-col-token'>350.000.000</td>
-                  <td class='text-center tb-col-percent'>35%</td>
-                  <td class='tb-col-lg-auto'>Strategic release as per game including airdrop, rewards</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Liquidity</th>
-                  <td class='text-end tb-col-token'>50.000.000</td>
-                  <td class='text-center tb-col-percent'>5%</td>
-                  <td class='tb-col-lg-auto'>Locked 1 month, then vested 7% monthly</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Marketing/Partnership</th>
-                  <td class='text-end tb-col-token'>120.000.000</td>
-                  <td class='text-center tb-col-percent'>12%</td>
-                  <td class='tb-col-lg-auto'>Locked 1 month, 15% at 2nd month, then released at 5% per month</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Reserve</th>
-                  <td class='text-end tb-col-token'>50.000.000</td>
-                  <td class='text-center tb-col-percent'>5%</td>
-                  <td class='tb-col-lg-auto'>Locked 1 year, then vested over a period of one year</td>
-                </tr>
-                <tr>
-                  <th class='tb-col-name' scope='row'>Total Supply</th>
-                  <th scope='row' class='text-end tb-col-token'>1.000.000.000</th>
-                  <th scope='row' class='text-center tb-col-percent'>100%</th>
-                  <th scope='row'></th>
-                </tr>
-                </tbody>
-              </table>
+        <div class='section section-tokenomics-2'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Tokenomics</h2>
+            <div class='section-content'>
+              <div class='table-responsive table-tokenomics-top is-animated' id='tokenomics-2-1'>
+                <table class='table table-styled'>
+                  <thead>
+                    <tr>
+                      <th class='tb-col-name'>TOKEN SALE</th>
+                      <th class='text-end tb-col-token'>TOKEN ALLOCATION</th>
+                      <th class='text-center tb-col-percent'>PERCENTAGE</th>
+                      <th class='tb-col-lg-auto'>TOKEN RELEASE SCHEDULE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Seed</th>
+                      <td class='text-end'>40.000.000</td>
+                      <td class='text-center'>20%</td>
+                      <td>8.5% at TGE and linear distribution over 18 months</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Private</th>
+                      <td class='text-end'>145.000.000</td>
+                      <td class='text-center'>72.5%</td>
+                      <td>7% at TGE and linear distribution over 18 months</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Public IDO</th>
+                      <td class='text-end'>15.000.000</td>
+                      <td class='text-center'>7.5%</td>
+                      <td>25% at TGE and 15% each month thereafter</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Total</th>
+                      <th scope='row' class='text-end'>200.000.000</th>
+                      <th scope='row' class='text-center'>100%</th>
+                      <th scope='row'></th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class='table-responsive table-tokenomics-bottom is-animated' id='tokenomics-2-2'>
+                <table class='table table-styled'>
+                  <thead>
+                    <tr>
+                      <th colspan='4'>TOKEN ALLOCATION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Token Sale</th>
+                      <td class='text-end tb-col-token'>200.000.000</td>
+                      <td class='text-center tb-col-percent'>20%</td>
+                      <td class='tb-col-lg-auto'>Unlocked as per token release schedule</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Team</th>
+                      <td class='text-end tb-col-token'>190.000.000</td>
+                      <td class='text-center tb-col-percent'>19%</td>
+                      <td class='tb-col-lg-auto'>Locked 1 year, then vested over a period of one year</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Advisors</th>
+                      <td class='text-end tb-col-token'>40.000.000</td>
+                      <td class='text-center tb-col-percent'>4%</td>
+                      <td class='tb-col-lg-auto'>Locked 1 year, then vested linearly over 6 months</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Ecosystem/Staking/Airdrop</th>
+                      <td class='text-end tb-col-token'>350.000.000</td>
+                      <td class='text-center tb-col-percent'>35%</td>
+                      <td class='tb-col-lg-auto'>Strategic release as per game including airdrop, rewards</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Liquidity</th>
+                      <td class='text-end tb-col-token'>50.000.000</td>
+                      <td class='text-center tb-col-percent'>5%</td>
+                      <td class='tb-col-lg-auto'>Locked 1 month, then vested 7% monthly</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Marketing/Partnership</th>
+                      <td class='text-end tb-col-token'>120.000.000</td>
+                      <td class='text-center tb-col-percent'>12%</td>
+                      <td class='tb-col-lg-auto'>Locked 1 month, 15% at 2nd month, then released at 5% per month</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Reserve</th>
+                      <td class='text-end tb-col-token'>50.000.000</td>
+                      <td class='text-center tb-col-percent'>5%</td>
+                      <td class='tb-col-lg-auto'>Locked 1 year, then vested over a period of one year</td>
+                    </tr>
+                    <tr>
+                      <th class='tb-col-name' scope='row'>Total Supply</th>
+                      <th scope='row' class='text-end tb-col-token'>1.000.000.000</th>
+                      <th scope='row' class='text-center tb-col-percent'>100%</th>
+                      <th scope='row'></th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class='section section-roadmap'>
-        <div id='frame-rocket' class='frame-wrap lazyload'>
-          <div class='frame'>
-            <div class='loader'>
-              <div class='loader-ring'></div>
-              <div class='rocket-wrapper'>
-                <div class='trail-wrapper'>
-                  <img loading='lazy' class='trail' alt='' src='images/trail.png' />
+        <div class='section section-roadmap'>
+          <div id='frame-rocket' class='frame-wrap lazyload'>
+            <div class='frame'>
+              <div class='loader'>
+                <div class='loader-ring'></div>
+                <div class='rocket-wrapper'>
+                  <div class='trail-wrapper'>
+                    <img loading='lazy' class='trail' alt='' src='images/trail.png' />
+                  </div>
+                  <img loading='lazy' class='rocket' alt='' src='images/small-rocket.png' />
                 </div>
-                <img loading='lazy' class='rocket' alt='' src='images/small-rocket.png' />
-              </div>
-              <div class='clouds-wrapper'>
-                <svg class='clouds' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 90.83'>
-                  <defs>
-                    <clipPath id='clip-path' transform='translate(1.75)'>
-                      <circle cx='42.5' cy='42.5' r='42.5' fill='none' />
-                    </clipPath>
-                    <filter id='goo' color-interpolation-filters='sRGB'>
-                      <feGaussianBlur in='SourceGraphic' stdDeviation='6' result='blur' />
-                      <feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -11'
-                                     result='goo' />
-                      <feBlend in='SourceGraphic' in2='goo' />
-                    </filter>
-                    <filter id='blurMe'>
-                      <feGaussianBlur in='SourceGraphic' stdDeviation='0.9' />
-                    </filter>
-                  </defs>
-                  <g clip-path='url(#clip-path)' fill='#eef2f3' filter='url(#goo)'>
-                    <g class='clouds-wrapper' filter='url(#blurMe)'>
-                      <ellipse class='cloud' cx='40' cy='61.83' rx='7' ry='7' />
-                      <ellipse class='cloud' cx='81' cy='68.83' rx='8' ry='8' />
-                      <ellipse class='cloud' cx='6' cy='63.83' rx='6' ry='6' />
-                      <ellipse class='cloud' cx='15' cy='70.83' rx='11' ry='11' />
-                      <ellipse class='cloud' cx='65' cy='74.83' rx='11' ry='11' />
-                      <ellipse class='cloud' cx='48' cy='71.83' rx='14' ry='14' />
-                      <ellipse class='cloud' cx='34' cy='75.83' rx='16' ry='16' />
+                <div class='clouds-wrapper'>
+                  <svg class='clouds' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 90.83'>
+                    <defs>
+                      <clipPath id='clip-path' transform='translate(1.75)'>
+                        <circle cx='42.5' cy='42.5' r='42.5' fill='none' />
+                      </clipPath>
+                      <filter id='goo' color-interpolation-filters='sRGB'>
+                        <feGaussianBlur in='SourceGraphic' stdDeviation='6' result='blur' />
+                        <feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -11'
+                          result='goo' />
+                        <feBlend in='SourceGraphic' in2='goo' />
+                      </filter>
+                      <filter id='blurMe'>
+                        <feGaussianBlur in='SourceGraphic' stdDeviation='0.9' />
+                      </filter>
+                    </defs>
+                    <g clip-path='url(#clip-path)' fill='#eef2f3' filter='url(#goo)'>
+                      <g class='clouds-wrapper' filter='url(#blurMe)'>
+                        <ellipse class='cloud' cx='40' cy='61.83' rx='7' ry='7' />
+                        <ellipse class='cloud' cx='81' cy='68.83' rx='8' ry='8' />
+                        <ellipse class='cloud' cx='6' cy='63.83' rx='6' ry='6' />
+                        <ellipse class='cloud' cx='15' cy='70.83' rx='11' ry='11' />
+                        <ellipse class='cloud' cx='65' cy='74.83' rx='11' ry='11' />
+                        <ellipse class='cloud' cx='48' cy='71.83' rx='14' ry='14' />
+                        <ellipse class='cloud' cx='34' cy='75.83' rx='16' ry='16' />
+                      </g>
                     </g>
-                  </g>
-                </svg>
+                  </svg>
+
+                </div>
 
               </div>
 
             </div>
-
-          </div>
-          <div class='container mb-3'>
-            <h2 class='section-title'>Roadmap</h2>
-          </div>
-          <div class='roadmap-update-timeline'>
-            <ul class='roadmap-update-timeline-list'>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q3 - 2021</h5>
-                  Game Concept & Gameplay <br>
-                  Design Characters <br>
-                  Testing Players
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q4 - 2021</h5>
-                  Tokenomics <br>
-                  Build Website <br>
-                  Game Trailer <br>
-                  Community Development <br>
-                  Game Development
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box roadmap-update-box-now is-animated'>
-                  <h5 class='h5'>Now -> Q2 - 2022</h5>
-                  <div class='roadmap-update-box-sub'>
-                    <div class='roadmap-update-box-sub-item'>
-                      <h6>12/2021</h6>
-                      Pitch Deck <br>
-                      Whitepaper <br>
-                      Official Trailer Release <br>
-                      Smart Contract Audit
-                    </div>
-                    <div class='roadmap-update-box-sub-item'>
-                      <h6>01/2022</h6>
-                      Community Event & AMA <br>
-                      Airdrop <br>
-                      Marketplace Release
-                    </div>
-                    <div class='roadmap-update-box-sub-item'>
-                      <h6>02/2022</h6>
-                      Game Beta Test for KOLs <br>
-                      Public Sale <br>
-                      Game Testnet <br>
-                      Listing DEX/CEX <br>
-                      NFT Early Sale
-                    </div>
-                    <div class='roadmap-update-box-sub-item'>
-                      <h6>03/2022</h6>
-                      Staking & Farming <br>
-                      Game Release (Web) <br>
-                      NFT Auction, Renting
+            <div class='container mb-3'>
+              <h2 class='section-title'>Roadmap</h2>
+            </div>
+            <div class='roadmap-update-timeline'>
+              <ul class='roadmap-update-timeline-list'>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q3 - 2021</h5>
+                    Game Concept & Gameplay <br>
+                    Design Characters <br>
+                    Testing Players
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q4 - 2021</h5>
+                    Tokenomics <br>
+                    Build Website <br>
+                    Game Trailer <br>
+                    Community Development <br>
+                    Game Development
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box roadmap-update-box-now is-animated'>
+                    <h5 class='h5'>Q1 - 2022</h5>
+                    <div class='roadmap-update-box-sub'>
+                      <div class='roadmap-update-box-sub-item'>
+                        <h6>12/2021</h6>
+                        Pitch Deck <br>
+                        Whitepaper <br>
+                        Official Trailer Release <br>
+                        Smart Contract Audit
+                      </div>
+                      <div class='roadmap-update-box-sub-item'>
+                        <h6>01/2022</h6>
+                        Community Event & AMA <br>
+                        Airdrop <br>
+                        Marketplace Release
+                      </div>
+                      <div class='roadmap-update-box-sub-item'>
+                        <h6>02/2022</h6>
+                        Game Beta Test for KOLs <br>
+                        Public Sale <br>
+                        Game Testnet <br>
+                        Listing DEX/CEX <br>
+                        NFT Early Sale
+                      </div>
+                      <div class='roadmap-update-box-sub-item'>
+                        <h6>03/2022</h6>
+                        Staking & Farming <br>
+                        Game Release (Web) <br>
+                        NFT Auction, Renting
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q2 - 2022</h5>
-                  Game Release (Mobile) <br>
-                  Arena Update <br>
-                  Guild
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q3 - 2022</h5>
-                  Etermon V2 <br>
-                  - War Guild <br>
-                  - World Map <br>
-                  - World Boss
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q4 - 2022</h5>
-                  Etermon V3 <br>
-                  - Endless Tower <br>
-                  - New Etermon <br>
-                  - New Element
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q1 - 2023</h5>
-                  Battle Royale Arena <br>
-                  Battle Pass
-                </div>
-              </li>
-              <li>
-                <div class='roadmap-update-box is-animated'>
-                  <h5 class='h5'>Q2 - 2023</h5>
-                  Metaverse Economy <br>
-                  Metaverse NFT Sale
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q2 - 2022</h5>
+                    Game Release (Mobile) <br>
+                    Arena Update <br>
+                    Guild
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q3 - 2022</h5>
+                    Etermon V2 <br>
+                    - War Guild <br>
+                    - World Map <br>
+                    - World Boss
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q4 - 2022</h5>
+                    Etermon V3 <br>
+                    - Endless Tower <br>
+                    - New Etermon <br>
+                    - New Element
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q1 - 2023</h5>
+                    Battle Royale Arena <br>
+                    Battle Pass
+                  </div>
+                </li>
+                <li>
+                  <div class='roadmap-update-box is-animated'>
+                    <h5 class='h5'>Q2 - 2023</h5>
+                    Metaverse Economy <br>
+                    Metaverse NFT Sale
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class='section section-core-team'>
-        <div class='container section-container'>
-          <h2 class='section-title'>CORE TEAM</h2>
-          <p class='section-title-sub'>
-            Every member of the team is an expert in different fields, but we know that teamwork is the essential key
-            to the project's success. Therefore, we always work closely together for the same goal, which is to help
-            our investors' dream come true
-          </p>
-          <div class='section-content profile-box-wrap'>
-            <div class='section-team-slider slider-items js-carousel-items is-animated'>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+        <div class='section section-core-team'>
+          <div class='container section-container'>
+            <h2 class='section-title'>CORE TEAM</h2>
+            <p class='section-title-sub'>
+              Every member of the team is an expert in different fields, but we know that teamwork is the essential key
+              to the project's success. Therefore, we always work closely together for the same goal, which is to help
+              our investors' dream come true
+            </p>
+            <div class='section-content profile-box-wrap'>
+              <div class='section-team-slider slider-items js-carousel-items is-animated'>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.1' alt=''>
+                    <h3 class='h3'>Onboarding</h3>
+                    <p class='h4'>CEO</p>
+                    <!-- <p>Onboarding</p> -->
                   </div>
-                  <h3 class='h3'>Onboarding</h3>
-                  <p class='h4'>CEO</p>
-                  <!-- <p>Onboarding</p> -->
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/hang-tran-17a175228/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/hang-tran-17a175228/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/CFO.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/CFO.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Susan Tran</h3>
+                    <p class='h4'>CFO</p>
+                    <p>CEO Moli Group <br>
+                      Former CFO at Yeah1 Group <br>
+                      Over 18 years in finance
+                    </p>
                   </div>
-                  <h3 class='h3'>Susan Tran</h3>
-                  <p class='h4'>CFO</p>
-                  <p>CEO Moli Group <br>
-                    Former CFO at Yeah1 Group <br>
-                    Over 18 years in finance
-                  </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.1' alt=''>
+                    <h3 class='h3'>Onboarding</h3>
+                    <p class='h4'>CMO</p>
+                    <!-- <p>Onboarding</p> -->
                   </div>
-                  <h3 class='h3'>Onboarding</h3>
-                  <p class='h4'>CMO</p>
-                  <!-- <p>Onboarding</p> -->
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/thinh-tranquoc/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/thinh-tranquoc/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/CPO-Game-Designer.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/CPO-Game-Designer.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Jonas Tran</h3>
+                    <p class='h4'>CPO - Game Designer</p>
+                    <p>Over 9 years in the online Game Industry</p>
                   </div>
-                  <h3 class='h3'>Jonas Tran</h3>
-                  <p class='h4'>CPO - Game Designer</p>
-                  <p>Over 9 years in the online Game Industry</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/chuc-bui/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/chuc-bui/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/CCO.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/CCO.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Chuc Bui</h3>
+                    <p class='h4'>CCO</p>
+                    <p>CEO Moli Star <br>
+                      Former CCO at Yeah1 Group <br>
+                      Over 13 years in the digital media
+                    </p>
                   </div>
-                  <h3 class='h3'>Chuc Bui</h3>
-                  <p class='h4'>CCO</p>
-                  <p>CEO Moli Star <br>
-                    Former CCO at Yeah1 Group <br>
-                    Over 13 years in the digital media
-                  </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/co-truong/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/co-truong/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/CTO.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/CTO.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Chris Truong</h3>
+                    <p class='h4'>CTO</p>
+                    <p>
+                      Highly accomplished with 8 years of experience in development and technical leadership experience
+                    </p>
                   </div>
-                  <h3 class='h3'>Chris Truong</h3>
-                  <p class='h4'>CTO</p>
-                  <p>
-                    Highly accomplished with 8 years of experience in development and technical leadership experience
-                  </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/dahlia-th%C6%B0%C6%A1ng/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/dahlia-th%C6%B0%C6%A1ng/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/CCO-Community.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/CCO-Community.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Dahlia Thuong</h3>
+                    <p class='h4'>CCO - Community</p>
+                    <p>Specialize in Social Media and <br> Global Ad Network</p>
                   </div>
-                  <h3 class='h3'>Dahlia Thuong</h3>
-                  <p class='h4'>CCO - Community</p>
-                  <p>Specialize in Social Media and <br> Global Ad Network</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/trang-nguyen-8bb334b2/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/trang-nguyen-8bb334b2/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Partnership-Manager.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Partnership-Manager.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Trang Nguyen</h3>
+                    <p class='h4'>Partnership Manager</p>
+                    <p>10 years in the digital media industry</p>
                   </div>
-                  <h3 class='h3'>Trang Nguyen</h3>
-                  <p class='h4'>Partnership Manager</p>
-                  <p>10 years in the digital media industry</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/jngyh/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/jngyh/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy'
+                        src='dummy/team/Global-Partnership-Pitchdeck-Whitepaper.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy'
-                         src='dummy/team/Global-Partnership-Pitchdeck-Whitepaper.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Jonathan N.</h3>
+                    <p class='h4'>Global Partnership - Pitchdeck/Whitepaper</p>
+                    <p>Over 15 years of experience in IT and Digital industry <br>
+                      Work at global companies from Australia, Singapore and Hong Kong</p>
                   </div>
-                  <h3 class='h3'>Jonathan N.</h3>
-                  <p class='h4'>Global Partnership - Pitchdeck/Whitepaper</p>
-                  <p>Over 15 years of experience in IT and Digital industry <br>
-                    Work at global companies from Australia, Singapore and Hong Kong</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/hhoangluu/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/vu-tran-40240b56/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-3.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-1.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Vu Tran</h3>
+                    <p class='h4'>Unity Leader</p>
+                    <p>5 years in Game Development</p>
                   </div>
-                  <h3 class='h3'>Luu Nguyen</h3>
-                  <p class='h4'>Unity Developer</p>
-                  <p>Over 3 years in Game Development <br>2 years in Server Development</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/tailh788/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/hhoangluu/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-1.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-2.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Luu Nguyen</h3>
+                    <p class='h4'>Unity Developer</p>
+                    <p>Over 3 years in Game Development <br>2 years in Server Development</p>
                   </div>
-                  <h3 class='h3'>Steven Le</h3>
-                  <p class='h4'>Unity Developer</p>
-                  <p>Over 3 years in Game Development</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/vu-tran-40240b56/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/tailh788/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-2.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-3.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Steven Le</h3>
+                    <p class='h4'>Unity Developer</p>
+                    <p>Over 3 years in Game Development</p>
                   </div>
-                  <h3 class='h3'>Vu Tran</h3>
-                  <p class='h4'>Unity Developer</p>
-                  <p>5 years in Game Development</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-4.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Unity-Developer-4.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Hieu Luu</h3>
+                    <p class='h4'>Unity Developer</p>
+                    <p>Over 8 years in Game Development <br>
+                      5 years in Unity</p>
                   </div>
-                  <h3 class='h3'>Hieu Luu</h3>
-                  <p class='h4'>Unity Developer</p>
-                  <p>Over 8 years in Game Development <br>
-                    5 years in Unity</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/thu-nguyen-b43722227/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/thu-nguyen-b43722227/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/2D-Artist-1.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/2D-Artist-1.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Thu Nguyen</h3>
+                    <p class='h4'>Artist Leader</p>
+                    <p>Over 5 years in 2D Game industry</p>
                   </div>
-                  <h3 class='h3'>Thu Nguyen</h3>
-                  <p class='h4'>2D Artist & Animator</p>
-                  <p>Over 3 years in 2D Game industry</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/narry-huynh-01a065125/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/narry-huynh-01a065125/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/2D-Artist-2.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/2D-Artist-2.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Narry Huynh</h3>
+                    <p class='h4'>2D Artist</p>
+                    <p>Over 5 years in Graphic Design<br> 3 years in 2D Game industry</p>
                   </div>
-                  <h3 class='h3'>Narry Huynh</h3>
-                  <p class='h4'>2D Artist</p>
-                  <p>Over 5 years in Graphic Design<br> 3 years in 2D Game industry</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/trungnghia112/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/trungnghia112/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/PM.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/PM.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>John Tran</h3>
+                    <p class='h4'>PM</p>
+                    <p>5 years in managing the entire product <br>life-cycle from conception, development, testing,
+                      launch.
+                    </p>
                   </div>
-                  <h3 class='h3'>John Tran</h3>
-                  <p class='h4'>PM</p>
-                  <p>5 years in managing the entire product <br>life-cycle from conception, development, testing,
-                    launch.
-                  </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/patrickvng3979/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/patrickvng3979/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Finance-Manager.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Finance-Manager.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Patrict Nguyen</h3>
+                    <p class='h4'>Finance manager</p>
+                    <p>Over 10 years in finance</p>
                   </div>
-                  <h3 class='h3'>Patrict Nguyen</h3>
-                  <p class='h4'>Finance manager</p>
-                  <p>Over 10 years in finance</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/UX-UI-Manager.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/UX-UI-Manager.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Mark T</h3>
+                    <p class='h4'>UX/UI Manager</p>
+                    <p>5 years in Graphic Design</p>
                   </div>
-                  <h3 class='h3'>Mark T</h3>
-                  <p class='h4'>UX/UI Manager</p>
-                  <p>5 years in Graphic Design</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/steve-toan-8b316173/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/steve-toan-8b316173/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Architech-Solution.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Architech-Solution.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Steve Toan</h3>
+                    <p class='h4'>Cloud Solution Architect</p>
+                    <p>Strategized, designed, and deployed innovative and complete cloud data security architecture for
+                      15 companies
+                    </p>
                   </div>
-                  <h3 class='h3'>Steve Toan</h3>
-                  <p class='h4'>Cloud Solution Architect</p>
-                  <p>Strategized, designed, and deployed innovative and complete cloud data security architecture for
-                    15 companies
-                  </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/anh-nguyen-843413120/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/anh-nguyen-843413120/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/DevOps.jpg?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/DevOps.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Anh Nguyen</h3>
+                    <p class='h4'>DevOps</p>
+                    <p>Over 13 years of hands-on experience in automating and optimizing mission critical deployments
+                      over large infrastructure</p>
                   </div>
-                  <h3 class='h3'>Anh Nguyen</h3>
-                  <p class='h4'>DevOps</p>
-                  <p>Over 13 years of hands-on experience in automating and optimizing mission critical deployments
-                    over large infrastructure</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/tran-hoang-phuc-8a3b74207/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/tran-hoang-phuc-8a3b74207/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Backend-Developer.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Backend-Developer.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Phuc Tran</h3>
+                    <p class='h4'>Backend Developer</p>
+                    <p>Over 5 years in Back-End Engineer </p>
                   </div>
-                  <h3 class='h3'>Phuc Tran</h3>
-                  <p class='h4'>Backend Developer</p>
-                  <p>Over 5 years in Back-End Engineer </p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/joseph-tran-0776451bb/' target='_blank'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/joseph-tran-0776451bb/' target='_blank'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/team/Marketing-Executive.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/team/Marketing-Executive.jpg?v=1.1.1'
-                         alt=''>
+                    <h3 class='h3'>Joseph Tran</h3>
+                    <p class='h4'>Marketing</p>
+                    <p>3 years in Marketing Planner</p>
                   </div>
-                  <h3 class='h3'>Joseph Tran</h3>
-                  <p class='h4'>Marketing</p>
-                  <p>3 years in Marketing Planner</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <img loading='lazy' src='images/no-avatar.png?v=1.1.1' alt=''>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <img loading='lazy' src='images/no-avatar.png?v=1.1.6' alt=''>
+                    </div>
+                    <h3 class='h3'>Onboarding</h3>
+                    <p class='h4'>Blockchain Leader</p>
+                    <!-- <p>onboarding</p> -->
                   </div>
-                  <h3 class='h3'>Onboarding</h3>
-                  <p class='h4'>Blockchain Leader</p>
-                  <!-- <p>onboarding</p> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class='section section-advisors'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Advisors</h2>
-          <div class='section-content profile-box-wrap'>
-            <div class='section-advisor-slider slider-items js-carousel-items is-animated'>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/neil-maxwell-0ba4261a1/' target="_blank">
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+        <div class='section section-advisors'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Advisors</h2>
+            <div class='section-content profile-box-wrap'>
+              <div class='section-advisor-slider slider-items js-carousel-items is-animated'>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/neil-maxwell-0ba4261a1/' target="_blank">
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/advisor/Advisor-1.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/advisor/Advisor-1.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Mr. Neil Maxwell</h3>
+                    <p class='h4'>Advisor</p>
+                    <p>NFT & Blockchain consultant <br> FieldForce Systems, Inc.</p>
                   </div>
-                  <h3 class='h3'>Mr. Neil Maxwell</h3>
-                  <p class='h4'>Advisor</p>
-                  <p>NFT & Blockchain consultant <br> FieldForce Systems, Inc.</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='https://www.linkedin.com/in/jasonhung-earth' target="_blank">
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='https://www.linkedin.com/in/jasonhung-earth' target="_blank">
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='dummy/advisor/Advisor-2.jpg?v=1.1.6'
+                        alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='dummy/advisor/Advisor-2.jpg?v=1.1.1' alt=''>
+                    <h3 class='h3'>Ph.D Jason Hung</h3>
+                    <p class='h4'>Advisor</p>
+                    <p>Co-Founder of <br> International Consensus Association</p>
                   </div>
-                  <h3 class='h3'>Ph.D Jason Hung</h3>
-                  <p class='h4'>Advisor</p>
-                  <p>Co-Founder of <br> International Consensus Association</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.1' alt=''>
+                    <h3 class='h3'>Onboarding</h3>
+                    <p class='h4'>Advisor</p>
                   </div>
-                  <h3 class='h3'>Onboarding</h3>
-                  <p class='h4'>Advisor</p>
                 </div>
-              </div>
-              <div class='slider-item'>
-                <div class='profile-box'>
-                  <div class='profile-box-img'>
-                    <div class='profile-box-img-icons'>
-                      <a href='#'>
-                        <img src='images/linkedin.png' alt=''>
-                      </a>
+                <div class='slider-item'>
+                  <div class='profile-box'>
+                    <div class='profile-box-img'>
+                      <div class='profile-box-img-icons'>
+                        <a href='#'>
+                          <img src='images/linkedin.png' alt=''>
+                        </a>
+                      </div>
+                      <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.6' alt=''>
                     </div>
-                    <img class='profile-box-img-image' loading='lazy' src='images/no-avatar.png?v=1.1.1' alt=''>
+                    <h3 class='h3'>Onboarding</h3>
+                    <p class='h4'>Advisor</p>
                   </div>
-                  <h3 class='h3'>Onboarding</h3>
-                  <p class='h4'>Advisor</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class='section section-investors'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Investors & Partners</h2>
-          <div class='section-partners-content is-animated'>
-            <ul class='section-list-items section-list-sm-items'>
-              <li><img loading='lazy' src='dummy/partner/Alameda-Research.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/coinbase-ventures.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Multicoin-Capital.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Binance-Labs.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/TrueDigital.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/vnetwork.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Metamask.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/bscscan.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/IndieZ.png' alt=''></li>
-              <!-- <li><img loading='lazy' src='dummy/partner/onus.png' alt=''></li> -->
-              <!-- <li><img loading='lazy' src='dummy/partner/coin98.png' alt=''></li> -->
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class='section section-partners'>
-        <div class='container section-container'>
-          <h2 class='section-title'>Media Partners</h2>
-          <div class='section-partners-content is-animated'>
-            <ul class='section-list-items section-list-sm-items'>
-              <!-- <li><img loading='lazy' src='dummy/partner/coin68.png' alt=''></li> -->
-              <li><img loading='lazy' src='dummy/partner/CoinLAB.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/gamekvn.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/lagvn.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Pancakeswap.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Anuntius.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/crypto-today.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/nft2coin.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/coin-market.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/Moli-Media.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/crypto-metaverse.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/ndtv.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/newsbtc.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/coincu.png' alt=''></li>
-              <li><img loading='lazy' src='dummy/partner/AsiaBlockchainReview.png' alt=''></li>
-              <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class='section section-footer'>
-        <div class='d-flex flex-column h-100'>
-          <div class='container section-container pb-0 text-center'>
-            <div class='row mt-4'>
-              <div class='col-lg-6 is-animated'>
-                <h2 class='section-title'>Developed by</h2>
-                <div class='section-content'>
-                  <ul class='section-list-items'>
-                    <li><img loading='lazy' src='images/logo-molistudio.png' alt=''></li>
-                  </ul>
-                  <p class='text-white'>a member of Moli Network</p>
-                </div>
-              </div>
-              <div class='col-lg-6 is-animated'>
-                <h2 class='section-title'>Audited by</h2>
-                <div class='section-content'>
-                  <ul class='section-list-items'>
-                    <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
-                  </ul>
-                </div>
-              </div>
+        <div class='section section-investors'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Investors & Partners</h2>
+            <div class='section-partners-content is-animated'>
+              <ul class='section-list-items section-list-sm-items'>
+                <li><img loading='lazy' src='dummy/partner/CoinLAB.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Alameda-Research.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/coinbase-ventures.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Multicoin-Capital.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Binance-Labs.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/TrueDigital.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/vnetwork.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Metamask.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/bscscan.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/IndieZ.png' alt=''></li>
+                <!-- <li><img loading='lazy' src='dummy/partner/onus.png' alt=''></li> -->
+                <!-- <li><img loading='lazy' src='dummy/partner/coin98.png' alt=''></li> -->
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              </ul>
             </div>
           </div>
-          <footer class='footer mt-auto mb-4'>
-            <div class='container'>
-              <div class='row is-animated'>
-                <div class='col-12 col-lg-4'>
-                  <div class='d-flex justify-content-center'>
-                    <div class='text-center'>
-                      <a class='logo-footer' href='.'><img loading='lazy' src='images/logo.png?v=1.1.1' alt=''></a>
-                      <p class='small'>Copyright © 2021 Etermon</p>
-                    </div>
+        </div>
+        <div class='section section-partners'>
+          <div class='container section-container'>
+            <h2 class='section-title'>Media Partners</h2>
+            <div class='section-partners-content is-animated'>
+              <ul class='section-list-items section-list-sm-items'>
+                <!-- <li><img loading='lazy' src='dummy/partner/coin68.png' alt=''></li> -->
+                <li><img loading='lazy' src='dummy/partner/CoinLAB.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/gamekvn.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/lagvn.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Pancakeswap.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Anuntius.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/crypto-today.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/nft2coin.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/coin-market.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/Moli-Media.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/crypto-metaverse.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/ndtv.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/newsbtc.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/coincu.png' alt=''></li>
+                <li><img loading='lazy' src='dummy/partner/AsiaBlockchainReview.png' alt=''></li>
+                <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='section section-footer'>
+          <div class='d-flex flex-column h-100'>
+            <div class='container section-container pb-0 text-center'>
+              <div class='row mt-4'>
+                <div class='col-lg-6 is-animated'>
+                  <h2 class='section-title'>Developed by</h2>
+                  <div class='section-content'>
+                    <ul class='section-list-items'>
+                      <li><img loading='lazy' src='images/logo-molistudio.png' alt=''></li>
+                    </ul>
+                    <p class='text-white'>a member of Moli Network</p>
                   </div>
                 </div>
-                <div class='col-6 col-lg-2'>
-                  <ul class='list-unstyled row'>
-                    <li><a href='#video-trailer'>Video Trailer</a></li>
-                    <li><a href='#about'>About</a></li>
-                    <li><a href='#gamesystem'>Game System</a></li>
-                    <li><a href='#roadmap'>Roadmap</a></li>
-                    <li><a href='#investors'>Investors & Partners</a></li>
-                  </ul>
-                </div>
-                <div class='col-6 col-lg-2'>
-                  <ul class='list-unstyled row'>
-                    <li><a target='_blank' href='https://doc.etermon.io/tokenomic'>Tokenomics</a></li>
-                    <li><a target='_blank' href='https://marketplace.etermon.io'>Marketplace</a></li>
-                    <li><a target='_blank' href='https://doc.etermon.io'>Whitepaper</a></li>
-                    <li><a target='_blank' href='https://etermon.io/docs/pitch-deck.pdf'>Pitch Deck</a></li>
-                    <li><a target='_blank' href='https://play.etermon.io/'>Gameplay demo</a></li>
-                  </ul>
-                </div>
-                <div class='col-12 col-lg-4 footer-nav-social'>
-                  <h5 class='h5'>JOIN OUR COMMUNITY</h5>
-                  <ul class='list-social'>
-                    <li><a target='_blank' href='https://t.me/EtermonAnnouncement'><img loading='lazy'
-                                                                                        src='images/tele-icon.png?v=1.1.1'
-                                                                                        alt='telegram'></a></li>
-                    <li><a target='_blank' href='https://discord.gg/m6QTpYK7pW'><img loading='lazy'
-                                                                                     src='images/discord-icon.png?v=1.1.1'
-                                                                                     alt='discord'></a></li>
-                    <li><a target='_blank' href='https://twitter.com/EtermonOfficial'><img
-                      src='images/twitter-icon.png?v=1.1.1' alt='twitter'></a></li>
-                    <li><a target='_blank' href='https://facebook.com/EtermonOfficial'><img loading='lazy'
-                                                                                            src='images/fb-icon.png?v=1.1.1'
-                                                                                            alt='facebook'></a></li>
-                    <li><a target='_blank' href='https://youtube.com/EtermonOfficial'><img loading='lazy'
-                                                                                           src='images/yt-icon.png?v=1.1.1'
-                                                                                           alt='youtube'></a></li>
-                    <li><a target='_blank' href='https://tiktok.com/@etermonofficial'><img
-                      src='images/tiktok-icon.png?v=1.1.1' alt='tiktok'></a></li>
-                  </ul>
+                <div class='col-lg-6 is-animated'>
+                  <h2 class='section-title'>Audited by</h2>
+                  <div class='section-content'>
+                    <ul class='section-list-items'>
+                      <li><img loading='lazy' src='images/logo-coming-soon.jpg' alt=''></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </footer>
+            <footer class='footer mt-auto mb-4'>
+              <div class='container'>
+                <div class='row is-animated'>
+                  <div class='col-12 col-lg-4'>
+                    <div class='d-flex justify-content-center'>
+                      <div class='text-center'>
+                        <a class='logo-footer' href='.'><img loading='lazy' src='images/logo.png?v=1.1.6' alt=''></a>
+                        <p class='small'>Copyright © 2021 Etermon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='col-6 col-lg-2'>
+                    <ul class='list-unstyled text-center text-lg-start row'>
+                      <li><a href='#video-trailer'>Video Trailer</a></li>
+                      <li><a href='#about'>About</a></li>
+                      <li><a href='#gamesystem'>Game System</a></li>
+                      <li><a href='#roadmap'>Roadmap</a></li>
+                      <li><a href='#investors'>Investors & Partners</a></li>
+                    </ul>
+                  </div>
+                  <div class='col-6 col-lg-2'>
+                    <ul class='list-unstyled text-center text-lg-start row'>
+                      <li><a target='_blank' href='https://doc.etermon.io/tokenomic'>Tokenomics</a></li>
+                      <li><a target='_blank' href='https://marketplace.etermon.io'>Marketplace</a></li>
+                      <li><a target='_blank' href='https://doc.etermon.io'>Whitepaper</a></li>
+                      <li><a target='_blank' href='https://etermon.io/docs/pitch-deck.pdf'>Pitch Deck</a></li>
+                      <li><a target='_blank' href='https://play.etermon.io/'>Gameplay demo</a></li>
+                    </ul>
+                  </div>
+                  <div class='col-12 col-lg-4 footer-nav-social'>
+                    <h5 class='h5'>JOIN OUR COMMUNITY</h5>
+                    <ul class='list-social'>
+                      <li><a target='_blank' href='https://t.me/EtermonAnnouncement'><img loading='lazy'
+                            src='images/tele-icon.png?v=1.1.6' alt='telegram'></a></li>
+                      <li><a target='_blank' href='https://discord.gg/m6QTpYK7pW'><img loading='lazy'
+                            src='images/discord-icon.png?v=1.1.6' alt='discord'></a></li>
+                      <li><a target='_blank' href='https://twitter.com/EtermonOfficial'><img
+                            src='images/twitter-icon.png?v=1.1.6' alt='twitter'></a></li>
+                      <li><a target='_blank' href='https://facebook.com/EtermonOfficial'><img loading='lazy'
+                            src='images/fb-icon.png?v=1.1.6' alt='facebook'></a></li>
+                      <li><a target='_blank' href='https://youtube.com/EtermonOfficial'><img loading='lazy'
+                            src='images/yt-icon.png?v=1.1.6' alt='youtube'></a></li>
+                      <li><a target='_blank' href='https://tiktok.com/@etermonofficial'><img
+                            src='images/tiktok-icon.png?v=1.1.6' alt='tiktok'></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class='nav-social'>
-  <ul class='nav-social-list'>
-    <li><a target='_blank' href='https://t.me/EtermonAnnouncement'><img loading='lazy' src='images/tele-icon.png'
-                                                                        alt='telegram'></a>
-    </li>
-    <li><a target='_blank' href='https://discord.gg/m6QTpYK7pW'><img loading='lazy' src='images/discord-icon.png'
-                                                                     alt='discord'></a>
-    </li>
-    <li><a target='_blank' href='https://twitter.com/EtermonOfficial'><img loading='lazy' src='images/twitter-icon.png'
-                                                                           alt='twitter'></a></li>
-    <li><a target='_blank' href='https://facebook.com/EtermonOfficial'><img loading='lazy' src='images/fb-icon.png'
-                                                                            alt='facebook'></a></li>
-    <li><a target='_blank' href='https://youtube.com/EtermonOfficial'><img loading='lazy' src='images/yt-icon.png'
-                                                                           alt='youtube'></a>
-    </li>
-    <li><a target='_blank' href='https://tiktok.com/@etermonofficial'><img loading='lazy' src='images/tiktok-icon.png'
-                                                                           alt='tiktok'></a></li>
-  </ul>
-</div>
+  <div class='nav-social'>
+    <ul class='nav-social-list'>
+      <li><a target='_blank' href='https://t.me/EtermonAnnouncement'><img loading='lazy' src='images/tele-icon.png'
+            alt='telegram'></a>
+      </li>
+      <li><a target='_blank' href='https://discord.gg/m6QTpYK7pW'><img loading='lazy' src='images/discord-icon.png'
+            alt='discord'></a>
+      </li>
+      <li><a target='_blank' href='https://twitter.com/EtermonOfficial'><img loading='lazy'
+            src='images/twitter-icon.png' alt='twitter'></a></li>
+      <li><a target='_blank' href='https://facebook.com/EtermonOfficial'><img loading='lazy' src='images/fb-icon.png'
+            alt='facebook'></a></li>
+      <li><a target='_blank' href='https://youtube.com/EtermonOfficial'><img loading='lazy' src='images/yt-icon.png'
+            alt='youtube'></a>
+      </li>
+      <li><a target='_blank' href='https://tiktok.com/@etermonofficial'><img loading='lazy' src='images/tiktok-icon.png'
+            alt='tiktok'></a></li>
+    </ul>
+  </div>
 
-<!-- Modal -->
-<div class='modal fade' id='modalComingSoon' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-  <div class='modal-dialog modal-dialog-centered'>
-    <div class='modal-content alert-warning'>
-      <div class='modal-body'>
-        <p class='h3 m-0 text-center p-4'>Coming soon...</p>
+  <!-- Modal -->
+  <div class='modal fade' id='modalComingSoon' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog modal-dialog-centered'>
+      <div class='modal-content alert-warning'>
+        <div class='modal-body'>
+          <p class='h3 m-0 text-center p-4'>Coming soon...</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Optional JavaScript -->
-<!-- Core JavaScript -->
-<!--<script src="dist/core.min.js"></script>-->
-<script src='third_party/fullpage.js/dist/fullpage.min.js'></script>
-<!--<script src='third_party/fullpage.js/dist/fullpage.extensions.min.js'></script>-->
-<script src='third_party/jquery.min.js'></script>
-<script src='third_party/bootstrap.bundle.min.js'></script>
-<script src='third_party/modernizr.min.js'></script>
-<script src='third_party/lazysizes.min.js'></script>
-<script src='third_party/spine-player/spine-player.js'></script>
-<script src='third_party/TweenMax/TweenMax.min.js'></script>
-<script src='third_party/slick-carousel/slick/slick.min.js'></script>
-<!-- End Core JavaScript -->
+  <!-- Optional JavaScript -->
+  <!-- Core JavaScript -->
+  <!--<script src="dist/core.min.js"></script>-->
+  <script src='third_party/fullpage.js/dist/fullpage.min.js'></script>
+  <!--<script src='third_party/fullpage.js/dist/fullpage.extensions.min.js'></script>-->
+  <script src='third_party/jquery.min.js'></script>
+  <script src='third_party/bootstrap.bundle.min.js'></script>
+  <script src='third_party/modernizr.min.js'></script>
+  <script src='third_party/lazysizes.min.js'></script>
+  <script src='third_party/spine-player/spine-player.js'></script>
+  <script src='third_party/TweenMax/TweenMax.min.js'></script>
+  <script src='third_party/slick-carousel/slick/slick.min.js'></script>
+  <!-- End Core JavaScript -->
 
-<!-- JavaScript -->
-<!--<script src="dist/app.min.js"></script>-->
-<script src='js/common.js?v=1.1.1'></script>
-<script src='customs/script.js?v=1.1.1'></script>
+  <!-- JavaScript -->
+  <!--<script src="dist/app.min.js"></script>-->
+  <script src='js/common.js?v=1.1.6'></script>
+  <script src='customs/script.js?v=1.1.6'></script>
 
-<script>
-  setTimeout(function() {
-    $('#loading-wrapper').fadeOut('fast')
-    $('.hero-content-cooperate').addClass('animate__animated animate__tada animate__repeat-2')
-    $('.button-col-android').addClass('animate__animated animate__backInLeft animate__delay-2s')
-    $('.button-col-ios').addClass('animate__animated animate__backInUp animate__delay-2s')
-    $('.button-col-web').addClass('animate__animated animate__backInRight animate__delay-2s')
-  }, 3000)
-</script>
-<script>
-  // lazy load script
-  if (document.getElementById('js-token-chart')) {
-    document.getElementById('js-token-chart').addEventListener('lazybeforeunveil', function() {
-      var scriptLibrary = document.createElement('script')
-      scriptLibrary.onload = function() {
-        var scriptChart = document.createElement('script')
-        scriptChart.src = 'js/chart.js?v=1.1.1'
-        document.body.appendChild(scriptChart)
-      }
-      scriptLibrary.src = 'third_party/echarts/dist/echarts.min.js?v=1.1.1'
-      document.head.appendChild(scriptLibrary)
+  <script>
+    setTimeout(function () {
+      $('#loading-wrapper').fadeOut('fast')
+      $('.hero-content-cooperate').addClass('animate__animated animate__tada animate__repeat-2')
+      $('.button-col-android').addClass('animate__animated animate__backInLeft animate__delay-2s')
+      $('.button-col-ios').addClass('animate__animated animate__backInUp animate__delay-2s')
+      $('.button-col-web').addClass('animate__animated animate__backInRight animate__delay-2s')
+    }, 3000)
+  </script>
+  <script>
+    // lazy load script
+    if (document.getElementById('js-token-chart')) {
+      document.getElementById('js-token-chart').addEventListener('lazybeforeunveil', function () {
+        var scriptLibrary = document.createElement('script')
+        scriptLibrary.onload = function () {
+          var scriptChart = document.createElement('script')
+          scriptChart.src = 'js/chart.js?v=1.1.6'
+          document.body.appendChild(scriptChart)
+        }
+        scriptLibrary.src = 'third_party/echarts/dist/echarts.min.js?v=1.1.6'
+        document.head.appendChild(scriptLibrary)
+      })
+    }
+    if (document.getElementById('frame-rocket')) {
+      document.getElementById('frame-rocket').addEventListener('lazybeforeunveil', function () {
+        var scriptLibrary = document.createElement('script')
+        scriptLibrary.onload = function () {
+          var scriptChart = document.createElement('script')
+          scriptChart.src = 'js/roadmap.js?v=1.1.6'
+          document.body.appendChild(scriptChart)
+        }
+        scriptLibrary.src = 'third_party/TweenMax/TweenMax.min.js?v=1.1.6'
+        document.head.appendChild(scriptLibrary)
+      })
+    }
+  </script>
+  <script>
+    new spine.SpinePlayer('dragon', {
+      jsonUrl: 'Anim/[R]DragonFlame/[R]Dragon.json?v=1',
+      atlasUrl: 'Anim/[R]DragonFlame/[R]Dragon.atlas.txt',
+      animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+      alpha: true,
+      showControls: false
     })
-  }
-  if (document.getElementById('frame-rocket')) {
-    document.getElementById('frame-rocket').addEventListener('lazybeforeunveil', function() {
-      var scriptLibrary = document.createElement('script')
-      scriptLibrary.onload = function() {
-        var scriptChart = document.createElement('script')
-        scriptChart.src = 'js/roadmap.js?v=1.1.1'
-        document.body.appendChild(scriptChart)
-      }
-      scriptLibrary.src = 'third_party/TweenMax/TweenMax.min.js?v=1.1.1'
-      document.head.appendChild(scriptLibrary)
-    })
-  }
-</script>
-<script>
-  new spine.SpinePlayer('dragon', {
-    jsonUrl: 'Anim/[R]DragonFlame/[R]Dragon.json?v=1',
-    atlasUrl: 'Anim/[R]DragonFlame/[R]Dragon.atlas.txt',
-    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
-    alpha: true,
-    showControls: false
-  })
 
-  new spine.SpinePlayer('sdragon', {
-    jsonUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.json?v=1',
-    atlasUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.atlas.txt',
-    animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
-    alpha: true,
-    showControls: false
-  })
-</script>
-<!-- End JavaScript -->
+    new spine.SpinePlayer('sdragon', {
+      jsonUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.json?v=1',
+      atlasUrl: 'Anim/[SR]DragonFlame/[SR]Dragon.atlas.txt',
+      animations: ['BlazingFireball', 'NormalAttack', 'Death', 'Hurt', 'Idle', 'Run'],
+      alpha: true,
+      showControls: false
+    })
+  </script>
+  <!-- End JavaScript -->
 </body>
+
 </html>

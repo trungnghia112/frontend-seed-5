@@ -1,5 +1,5 @@
 .section-roadmap {
-
+  overflow: hidden;
   // https://www.uplabs.com/posts/css-rocket-animation-with-gsap
   .frame {
     height: 100%;
@@ -25,7 +25,8 @@
   }
 
   .loader-ring {
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/loader-stars.jpg') no-repeat center center;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/loader-stars.jpg')
+      no-repeat center center;
     background-size: 95px 95px;
     width: 105px;
     height: 105px;
