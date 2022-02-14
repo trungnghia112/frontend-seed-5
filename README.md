@@ -1,6 +1,6 @@
 # [Frontend Seed 5](https://github.com/trungnghia112/frontend-seed-5)
 
-This template features predefined file paths for Bootstrap 4 and jQuery, so you can quickly create Bootstrap websites.
+This template features predefined file paths for Bootstrap 5, so you can quickly create Bootstrap websites.
 
 ## Status
 
@@ -46,13 +46,13 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 - Simple, intuitive, clean code.
 
-- **Bootstrap ^5.1.0**
+- **Bootstrap ^5.1.3**
 
-- **Popper ^2.9.3**(Because Bootstrap popovers and tooltips need it)
+- **Popper ^2.10.2**(Because Bootstrap popovers and tooltips need it)
 
 - **Modernizr 2.8.3**
 
-- **Font Awesome 5.12.1**
+- **Font Awesome ^5.15.4**
 
 - **Prettier ^2.0.5** (Opinionated Code Formatter).
 
