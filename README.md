@@ -50,15 +50,15 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 
 - Simple, intuitive, clean code.
 
-- **Bootstrap ^5.1.3**
+- **Bootstrap 5.2.0-beta1**
 
-- **Popper ^2.10.2**(Because Bootstrap popovers and tooltips need it)
+- **Popper ^2.11.5**(Because Bootstrap popovers and tooltips need it)
 
 - **Modernizr 2.8.3**
 
-- **Font Awesome ^5.15.4**
+- **Font Awesome ^6.1.1**
 
-- **Prettier ^2.0.5** (Opinionated Code Formatter).
+- **Prettier ^2.6.2** (Opinionated Code Formatter).
 
 ## Buy me a beer
 
