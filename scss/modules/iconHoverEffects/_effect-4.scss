@@ -40,7 +40,7 @@
       @include transition(box-shadow 0.2s);
 
       &:after {
-        @include animation(hi-spinAround 9s linear infinite)
+        @include animation(hi-spinAround 9s linear infinite);
       }
     }
   }

@@ -1,5 +1,5 @@
 /* Effect 7 */
-@mixin hi-icon-effect-7($color,$background-color) {
+@mixin hi-icon-effect-7($color, $background-color) {
   .hi-icon {
     box-shadow: 0 0 0 2px rgba($background-color, 1);
     -webkit-transition: background 0.2s, color 0.2s;
@@ -23,7 +23,6 @@
 .hi-icon-effect-7 {
   @include hi-icon-effect-7(#ffffff, #ffffff);
 }
-
 
 /* Effect 7a */
 @mixin hi-icon-effect-7a($background-color) {
@@ -57,7 +56,6 @@
   @include hi-icon-effect-7a(#ffffff);
 }
 
-
 /* Effect 7b */
 @mixin hi-icon-effect-7b($background-color) {
   .hi-icon {
@@ -70,7 +68,7 @@
     &:after {
       box-shadow: 2px 2px rgba($background-color, 1);
       @include transform(rotate(-90deg));
-      @include transition(opacity 0.2s, transform 0.2s)
+      @include transition(opacity 0.2s, transform 0.2s);
     }
 
     &:hover {

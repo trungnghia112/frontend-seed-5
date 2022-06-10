@@ -1,5 +1,5 @@
 /* Effect 5 */
-@mixin hi-icon-effect-5($color,$background) {
+@mixin hi-icon-effect-5($color, $background) {
   .hi-icon {
     box-shadow: 0 0 0 2px rgba($background, 1);
     overflow: hidden;
@@ -35,9 +35,8 @@
 }
 
 .hi-icon-effect-5d .hi-icon:hover:before {
-  @include animation(hi-toBottomFromTop 0.3s forwards)
+  @include animation(hi-toBottomFromTop 0.3s forwards);
 }
-
 
 @include keyframes(hi-toRightFromLeft) {
   49% {
@@ -80,7 +79,7 @@
 
 @include keyframes(hi-toBottomFromTop) {
   49% {
-    @include transform(translateY(100%))
+    @include transform(translateY(100%));
   }
   50% {
     opacity: 0;

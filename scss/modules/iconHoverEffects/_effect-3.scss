@@ -40,7 +40,7 @@
 }
 
 .hi-icon-effect-3a {
-  @include hi-icon-effect-3a(#f06060, #FFF);
+  @include hi-icon-effect-3a(#f06060, #fff);
 }
 
 /* Effect 3b */
@@ -65,5 +65,5 @@
 }
 
 .hi-icon-effect-3b {
-  @include hi-icon-effect-3b(#FFF, #f06060);
+  @include hi-icon-effect-3b(#fff, #f06060);
 }

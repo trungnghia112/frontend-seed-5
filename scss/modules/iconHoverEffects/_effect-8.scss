@@ -20,7 +20,7 @@
       color: $color;
 
       &:after {
-        @include animation(hi-sonarEffect 1.3s ease-out 75ms)
+        @include animation(hi-sonarEffect 1.3s ease-out 75ms);
       }
     }
   }
@@ -30,10 +30,12 @@
     }
     40% {
       opacity: 0.5;
-      box-shadow: 0 0 0 2px rgba($background-color, 0.1), 0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
+      box-shadow: 0 0 0 2px rgba($background-color, 0.1),
+        0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
     }
     100% {
-      box-shadow: 0 0 0 2px rgba($background-color, 0.1), 0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
+      box-shadow: 0 0 0 2px rgba($background-color, 0.1),
+        0 0 5px 5px $color-hover, 0 0 0 5px rgba($background-color, 0.5);
       opacity: 0;
       @include transform(scale(1.5));
     }
@@ -43,5 +45,3 @@
 .hi-icon-effect-8 {
   @include hi-icon-effect-8(#ffffff, #ffffff, #3851bc);
 }
-
-

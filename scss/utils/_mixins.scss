@@ -96,7 +96,7 @@ $prefix-for-spec: true !default;
 $image-path: '../images' !default;
 $fallback-extension: 'png' !default;
 $retina-suffix: '@2x';
-@mixin background-image($name, $size:false) {
+@mixin background-image($name, $size: false) {
   background-image: url(#{$image-path}/#{$name}.svg);
   @if ($size) {
     background-size: $size;
@@ -104,7 +104,10 @@ $retina-suffix: '@2x';
   .no-svg & {
     background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
 
-    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5) {
       background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
     }
   }
@@ -195,11 +198,9 @@ $retina-suffix: '@2x';
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
   } @else if ($horizontal) {
     left: 50%;
     transform: translate(-50%, 0);
-
   } @else if ($vertical) {
     top: 50%;
     transform: translate(0, -50%);

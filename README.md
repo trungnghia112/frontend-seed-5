@@ -4,11 +4,15 @@ This template features predefined file paths for Bootstrap 5, so you can quickly
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/trungnghia112/frontend-seed-5/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/trungnghia112/frontend-seed-5)](https://raw.githubusercontent.com/trungnghia112/frontend-seed-5/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/startbootstrap-bare.svg)](https://www.npmjs.com/package/frontend-seed-5)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/status.svg)](https://david-dm.org/trungnghia112/frontend-seed-5)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/dev-status.svg)](https://david-dm.org/trungnghia112/frontend-seed-5?type=dev)
+
+[comment]: <> ([![dependencies Status]&#40;https://david-dm.org/BlackrockDigital/startbootstrap-bare/status.svg&#41;]&#40;https://david-dm.org/trungnghia112/frontend-seed-5&#41;)
+
+[comment]: <> ([![devDependencies Status]&#40;https://david-dm.org/BlackrockDigital/startbootstrap-bare/dev-status.svg&#41;]&#40;https://david-dm.org/trungnghia112/frontend-seed-5?type=dev&#41;)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![GitHub: issues](https://img.shields.io/github/issues/trungnghia112/frontend-seed-5)](https://github.com/trungnghia112/frontend-seed-5/issues)
 
 ## Download and Installation
 
