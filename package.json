@@ -1,6 +1,6 @@
 {
   "name": "frontend-seed-5",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A basic HTML starter template for Bootstrap 5",
   "keywords": [
     "css",
@@ -25,7 +25,8 @@
     "start": "gulp serve",
     "prettier": "prettier ./**/*.{json,md,scss} --write",
     "clean": "gulp clean",
-    "build": "npm run clean && npm run prettier && gulp build",
+    "copy:third_party": "node tools/cp-third_party.js",
+    "build": "npm run clean && npm run copy:third_party && npm run prettier && gulp build",
     "release": "standard-version -a",
     "release-as": "standard-version --release-as",
     "release-minor": "standard-version minor -a",
@@ -68,7 +69,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "prettier": "^2.7.1",
-    "sass": "^1.54.3"
+    "sass": "^1.54.3",
+    "fs-extra": "^10.1.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",

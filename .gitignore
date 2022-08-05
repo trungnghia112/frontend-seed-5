@@ -8,3 +8,4 @@ test/bower_components
 *_BAK*
 /npm-debug.log
 /yarn.lock
+!third_party/node_modules
