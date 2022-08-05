@@ -1,6 +1,6 @@
 {
   "name": "frontend-seed-5",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A basic HTML starter template for Bootstrap 5",
   "keywords": [
     "css",
@@ -49,11 +49,11 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/register": "^7.17.7",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/register": "^7.18.9",
     "browser-sync": "^2.27.10",
-    "eslint": "^8.17.0",
+    "eslint": "^8.21.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
@@ -67,13 +67,13 @@
     "gulp-size": "^4.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "prettier": "^2.6.2",
-    "sass": "^1.52.3"
+    "prettier": "^2.7.1",
+    "sass": "^1.54.3"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@fortawesome/fontawesome-free": "^6.1.2",
     "@popperjs/core": "^2.11.5",
-    "bootstrap": "5.2.0-beta1",
+    "bootstrap": "5.2.0",
     "standard-version": "^9.5.0"
   }
 }
